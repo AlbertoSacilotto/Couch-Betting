@@ -1,0 +1,47 @@
+* World Wide Web
+
+. Answer: HTML, HTTP, URL or URI
+
+. Answer: They are adressed by a URL
+
+. Answer: Constent of a URL
+
+.. Scheme (mostly HTTP)
+
+.. user info
+
+.. host name
+
+.. path to the page or file
+
+* Web Server
+
+. Answer: Its a PC which has the contents of a website
+
+. Answer: It accpets request via HTTP and sends the content to the Requester
+
+. Answer: It can be send by the user and saved on the server if its configured to do so
+
+. Answer: -
+
+* Web Client 
+
+. Answer: application software
+
+. Answer: its accesses the World Wide Web and requests contents from a web server
+
+. Answer: Huh?
+
+* Hello World
+
+. Answer: the head is the container of data about data
+
+. Answer: <!DocType html> informs the browser about which document type to expect
+
+. Answer: head and body (contains the information such as text or images which are displayed on the web page)
+
+. Answer: by writing <em>.</em> (dot represents the text you want to be written in italic or just cursive)
+
+. Answer: by writing <strong>.</strong> (dot represents the text you want to be written in bold)
+
+ Gemacht Arsim Saliu und Yanis Ferecean
