@@ -1,0 +1,88 @@
+h1{
+    color:rgb(0, 76, 148);
+    font-size: 35px;
+    text-decoration: underline;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-style: normal;
+    text-align:left;
+    font-weight: 100;
+}
+
+p{
+    font-size: 18px;
+    font-weight:600;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: normal;
+    text-align:left;
+}
+
+#smallText{
+    font-size: 14px;
+}
+
+section{
+    background-color: rgb(255, 255, 255);
+    margin-right: 400px;
+    margin-left: 400px;
+    padding-left: 100px;
+    border-radius: 9px;
+    border-style:outset;
+    border-color: rgb(0, 100, 200);
+    margin-bottom: 10px;
+}
+
+#titlebar{
+    font-size: 35px;
+    font-family:sans-serif;
+    font-style: normal;
+    font-weight: 900;
+
+    text-align:left;
+    color:rgb(0, 76, 148);
+
+    background-color: rgb(255, 255, 255);
+    border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
+    border-style: outset;
+    border-color: rgb(0, 100, 200);
+
+    margin-bottom: 10px;
+    margin-top: -10px;
+    margin-left: -7px;
+    margin-right: -8px;
+
+    padding-left: 10px;
+}
+
+img.picturesPL{
+    border-style:outset;
+    border-color: rgb(0, 100, 200);
+    width: 276.41px;
+    height: 184.49px;
+    margin-left:400px;
+    border-radius: 9px;
+    margin-bottom: 10px;
+    white-space:nowrap;
+}
+img.picturesFL{
+    border-style:outset;
+    border-color: rgb(0, 100, 200);
+    width: 276.41px;
+    height: 184.49px;
+    margin-left:518px;
+    border-radius: 9px;
+    margin-bottom: 10px;
+    display:inline-block;
+}
+
+img.picturesPL:hover{
+    box-shadow: 0 0 2px 1px rgb(0,130,200);
+}
+img.picturesFL:hover{
+    box-shadow: 0 0 2px 1px rgb(0,130,200);
+}
+
+body{
+    background-image: url(arena.jpg);   
+    background-attachment: fixed;
+}
