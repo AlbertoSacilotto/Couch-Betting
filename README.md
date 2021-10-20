@@ -21,9 +21,9 @@
 
 * The Web API for the scores should be made by the 20th of April
 
-* The Fantasy League system should work by the 30th May
+* The Fantasy League system should work by the 16th May
 
-* The Betting System should work by the 30 of May
+* The Betting System should work by the 30th May
 
 === Members and their tasks
 
