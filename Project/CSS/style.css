@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap');
   body {
-    background-image: url(/Images/arena_background.jpg);
+    background-image: url(/Images/arena-background.jpg);
     background-attachment: fixed;
     background-size:cover;
     width: 98%;
@@ -127,7 +127,8 @@
     height: 18%;
     border-color: rgb(0, 100, 200);
     border-radius: 10px;
-    margin-left: 2%;
+    margin-left:15%;
+    margin-right: 5px;
   }
   .mediumPictures:hover{
     box-shadow: 0 0 2px 1px rgb(0,130,200);
@@ -137,15 +138,15 @@
     height: 200;
   }
   section{
-    background-color: rgb(10, 245, 10);
+    background-color: rgb(150, 83, 204);
     font-size: 20px;
     font-family: 'Yanone Kaffeesatz',sans-serif;
-    border: rgb(102, 11, 187);
+    border: rgb(119, 33, 199);
     border-radius: 10px;
-    border-width: 20px;
-    padding: 10px;
-    margin-left: 2%;
-    margin-right: 2%;
+    padding:4%;
+    padding-right: -10%;
+    margin-left: 15%;
+    margin-right: 15%;
     margin-top: 2%;
     margin-bottom: 2%;
   }
