@@ -142,7 +142,7 @@ body::-webkit-scrollbar {
     width: 327.45;
     height: 185;
   }
-  section{
+  article{
     background-color: rgb(188, 247, 255);
     font-size: 30px;
     font-family: 'Yanone Kaffeesatz',sans-serif;
