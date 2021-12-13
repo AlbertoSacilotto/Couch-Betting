@@ -1,10 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap');
-  body {
-    background-image: url(/Images/arena-background.jpg);
-    background-attachment: fixed;
-    background-size:cover;
-    width: 98%;
-  }
+body {
+  background-image: url(/Project/Images/arenabackground.jpg);
+  background-attachment:fixed;
+  background-size:cover;
+  width: 100%;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+body::-webkit-scrollbar {
+  display: none;
+}
 /*Nav bar*/
 /*==================================================*/
   #ulNav {
@@ -39,7 +44,7 @@
   .navText:hover {
     font-size: 40px;
     text-align: center;
-    color: rgb(0, 255, 229);
+    color: rgba(188, 247, 255, 0.85);
     margin-top: -5px;
   }
 
@@ -71,7 +76,7 @@
 
   #signup:hover{
     color:rgb(44, 38, 38);
-    background-color: rgba(0, 255, 229, 0.85);
+    background-color: rgb(188, 247, 255);
     transition: 0.3s;
   }
 
@@ -91,7 +96,7 @@
 
   #login:hover{
     color:rgb(44, 38, 38);
-    background-color: rgba(0, 255, 229, 0.85);
+    background-color: rgb(188, 247, 255);
     transition: 0.3s;
   }
 /*==================================================*/
@@ -123,32 +128,35 @@
   }
 
   .mediumPictures {
-    width: 32%;
-    height: 18%;
-    border-color: rgb(0, 100, 200);
+    width: 28.5%;
+    height: 16%;
     border-radius: 10px;
-    margin-left:15%;
-    margin-right: 5px;
+    margin-left: 15%;
+    margin-right: -2.3%;
+    box-shadow:  0 0 2px 1px rgb(0, 0, 0);
   }
   .mediumPictures:hover{
-    box-shadow: 0 0 2px 1px rgb(0,130,200);
+    box-shadow: 0 0 10px 1px rgb(185, 230, 255);
   }
   .TopNewsPictures{
-    width: 356;
-    height: 200;
+    width: 327.45;
+    height: 185;
   }
   section{
-    background-color: rgb(150, 83, 204);
-    font-size: 20px;
+    background-color: rgb(188, 247, 255);
+    font-size: 30px;
     font-family: 'Yanone Kaffeesatz',sans-serif;
-    border: rgb(119, 33, 199);
     border-radius: 10px;
-    padding:4%;
-    padding-right: -10%;
+    box-shadow:  0 0 2px 1px rgb(0, 0, 0);
+    padding-right: -20%;
+    padding-left: 4%;
+    padding-top: 2%;
+    padding-bottom: 4%;
     margin-left: 15%;
     margin-right: 15%;
     margin-top: 2%;
     margin-bottom: 2%;
+    font-weight: 400;
   }
 
   /* /Main Page */
