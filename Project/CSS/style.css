@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap');
 body {
-  background-image: url(/Project/Images/arenabackground.jpg);
+  background-image: url(Project/Images/arenabackground.jpg);
   background-attachment:fixed;
   background-size:cover;
   width: 100%;
