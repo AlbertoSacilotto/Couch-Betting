@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap');
+body {
+  background-image: url(/Images/CouchBack\ PSves.jpg);
+  background-attachment:fixed;
+  background-size:cover;
+  width: 100%;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+/*Nav bar*/
+/*==================================================*/
+  #ulNav {
+    list-style-type: none;
+    margin-left: -1.25em;
+    margin-top: -1.25em;
+    overflow: hidden;
+    background-color: #270027;
+    height: 5em;
+    width: 99.4%;
+    box-shadow: 0 0.625em 0.625em -0.125em rgba(0,0,0,.5);
+  }
+  
+  nav > ul > li {
+    display: inline;
+  }
+  
+  .navText {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 2.0625em;
+    text-decoration: none;
+    display: block;
+    color: white;
+    border: 0.625em;
+    border-color: white;
+    text-align: center;
+    padding: 0.016em 1em;
+  }
+
+  .navText:hover {
+    text-align: center;
+    color: #00ffa1;
+    margin-top: -5px;
+    transition: 0.2s;
+  }
+
+  .navSpace {
+    padding: 1.875em 0.0625em;
+    float: left;
+  }
+
+  .navSpaceRightBound {
+    padding: 1.875em 0.0625em;
+    float: right;
+  }
+
+  #signup{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 2.0625em;
+    text-decoration: none;
+    color: white;
+    background-color: rgb(39, 0, 39);;
+    margin-left: 1.2em;
+    margin-right: 1.2em;
+    padding: 0.35em;
+    padding-left: 0.875em;
+    padding-right: 0.875em;
+    border: 0.3125em black;    
+    border-radius: 5px;
+  }
+
+  #signup:hover{
+    color:rgb(44, 38, 38);
+    background-color: #00ffa1;
+    transition: 0.5s;
+  }
+
+  #login{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 2.0625em;
+    text-decoration: none;
+    color: white;
+    background-color: rgb(39, 0, 39);
+    /*background-color: rgb(44, 38, 38);*/
+    padding: 0.35em;
+    padding-left: 0.875em;
+    padding-right: 0.875em;
+    border: 5px black;    
+    border-radius: 5px;
+  }
+
+  #login:hover{
+    color:rgb(44, 38, 38);
+    background-color: #00ffa1;
+    transition: 0.5s;
+  }
+/*==================================================*/
+/*/Nav bar*/
+
+/* Main Page */
+  .grid-container {
+    display: grid;
+    grid-template-columns: 32% 69%;  
+    padding-top: 71px;
+    margin-right: -9px;
+    margin-left: -9px;
+    margin-bottom: 2000px;
+    
+  }
+  #grid-item-left {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(188, 247, 255);
+    color:rgb(27, 27, 27);
+    font-size: 30px;
+    text-align: center;
+  }
+
+  #grid-item-right {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(255, 255, 255, 0.85);
+    color:rgb(27, 27, 27);
+    border-left: 5px solid rgba(0, 202, 182, 0.472);
+    font-size: 30px;
+    text-align: left;
+    padding-left: 1em;
+  }
+
+  .mediumPictures {
+    width: 28.5%;
+    height: 16%;
+    border-radius: 10px;
+    margin-left: 15%;
+    margin-right: -2.3%;
+    box-shadow:  0 0 2px 1px rgb(0, 0, 0);
+  }
+  .mediumPictures:hover{
+    box-shadow: 0 0 10px 1px rgb(185, 230, 255);
+  }
+  .TopNewsPictures{
+    width: 327.45;
+    height: 185;
+  }
+  article{
+    background-color: rgb(188, 247, 255);
+    font-size: 30px;
+    font-family: 'Yanone Kaffeesatz',sans-serif;
+    border-radius: 10px;
+    box-shadow:  0 0 2px 1px rgb(0, 0, 0);
+    padding-right: -20%;
+    padding-left: 4%;
+    padding-top: 2%;
+    padding-bottom: 4%;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 2%;
+    font-weight: 400;
+  }
+
+  /* /Main Page */
