@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap');
 body {
-  background-image: url(/Images/arenabackground.jpg);
+  background-image: url(/Images/CouchBack\ PSves.jpg);
   background-attachment:fixed;
   background-size:cover;
   width: 100%;
@@ -17,11 +17,10 @@ body::-webkit-scrollbar {
     margin-left: -1.25em;
     margin-top: -1.25em;
     overflow: hidden;
-    background-color: rgb(44, 38, 38);;
+    background-color: #270027;
     height: 5em;
     width: 99.4%;
     box-shadow: 0 0.625em 0.625em -0.125em rgba(0,0,0,.5);
-    position:fixed;
   }
   
   nav > ul > li {
@@ -38,13 +37,13 @@ body::-webkit-scrollbar {
     border-color: white;
     text-align: center;
     padding: 0.016em 1em;
-    transition: 0.2s;
   }
 
   .navText:hover {
     text-align: center;
-    color: rgba(188, 247, 255, 0.85);
+    color: #00ffa1;
     margin-top: -5px;
+    transition: 0.2s;
   }
 
   .navSpace {
@@ -62,7 +61,7 @@ body::-webkit-scrollbar {
     font-size: 2.0625em;
     text-decoration: none;
     color: white;
-    background-color: rgb(44, 38, 38);
+    background-color: rgb(39, 0, 39);;
     margin-left: 1.2em;
     margin-right: 1.2em;
     padding: 0.35em;
@@ -74,8 +73,8 @@ body::-webkit-scrollbar {
 
   #signup:hover{
     color:rgb(44, 38, 38);
-    background-color: rgb(188, 247, 255);
-    transition: 0.3s;
+    background-color: #00ffa1;
+    transition: 0.5s;
   }
 
   #login{
@@ -83,7 +82,8 @@ body::-webkit-scrollbar {
     font-size: 2.0625em;
     text-decoration: none;
     color: white;
-    background-color: rgb(44, 38, 38);
+    background-color: rgb(39, 0, 39);
+    /*background-color: rgb(44, 38, 38);*/
     padding: 0.35em;
     padding-left: 0.875em;
     padding-right: 0.875em;
@@ -93,8 +93,8 @@ body::-webkit-scrollbar {
 
   #login:hover{
     color:rgb(44, 38, 38);
-    background-color: rgb(188, 247, 255);
-    transition: 0.3s;
+    background-color: #00ffa1;
+    transition: 0.5s;
   }
 /*==================================================*/
 /*/Nav bar*/
