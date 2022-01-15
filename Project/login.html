@@ -4,9 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/style.css">
     <title>Login</title>
 </head>
-<body>
-    
+<body id="login-Body">
+
+    <div id="login-Div">
+        <div id="login-Side">
+            <h1 class="login-Side-Content" id="login-Side-Header">Welcome Back!</h1>
+            <p class="login-Side-Content login-Side-Paragraph">To keep connected with us please </p> 
+            <p class="login-Side-Content login-Side-Paragraph">with your personal info</p>
+            <button class="login-Side-Content" id="login-Side-Button" onclick="window.location.href = 'signup.html';">SIGN IN</button>
+        </div>
+
+        <div id="login-Main">
+
+            <h1 id="login-Main-Header">Create Account</h1>
+           
+            <input class="login-Main-Input" type="text" name="name" placeholder="Name"><br>
+            <input class="login-Main-Input" type="text" name="email" placeholder="Email"><br>
+            <input class="login-Main-Input" type="password" name="password" placeholder="Password"><br><br>
+
+            <button class="login-Side-Content" id="login-Main-Button">SIGN UP</button>
+        </div>
+    </div>
+
 </body>
 </html>
