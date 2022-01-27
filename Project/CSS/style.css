@@ -4,11 +4,6 @@ body {
   background-attachment:fixed;
   background-size:cover;
   width: 100%;
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-}
-body::-webkit-scrollbar {
-  display: none;
 }
 /*Nav bar*/
 /*==================================================*/
@@ -16,10 +11,11 @@ body::-webkit-scrollbar {
     list-style-type: none;
     margin-left: -1.25em;
     margin-top: -1.25em;
+    padding-bottom: 5.5em;
     overflow: hidden;
     background-color: #270027;
     height: 5em;
-    width: 99.4%;
+    width: 120.2em;
     box-shadow: 0 0.625em 0.625em -0.125em rgba(0,0,0,.5);
   }
   
@@ -36,7 +32,7 @@ body::-webkit-scrollbar {
     border: 0.625em;
     border-color: white;
     text-align: center;
-    padding: 0.016em 1em;
+    padding: 0.1em 1.3em;
   }
 
   .navText:hover {
@@ -44,6 +40,7 @@ body::-webkit-scrollbar {
     color: #00ffa1;
     margin-top: -5px;
     transition: 0.2s;
+    text-decoration: none;
   }
 
   .navSpace {
@@ -74,7 +71,7 @@ body::-webkit-scrollbar {
   #signup:hover{
     color:rgb(44, 38, 38);
     background-color: #00ffa1;
-    transition: 0.5s;
+    transition: 1s;
   }
 
   #login{
@@ -94,7 +91,7 @@ body::-webkit-scrollbar {
   #login:hover{
     color:rgb(44, 38, 38);
     background-color: #00ffa1;
-    transition: 0.5s;
+    transition: 1s;
   }
 /*==================================================*/
 /*/Nav bar*/
@@ -134,29 +131,61 @@ body::-webkit-scrollbar {
     border-radius: 10px;
     margin-left: 15%;
     margin-right: -2.3%;
-    box-shadow:  0 0 2px 1px rgb(0, 0, 0);
+    box-shadow:  0 0 0.2em 0.02em rgb(0, 0, 0);
   }
   .mediumPictures:hover{
-    box-shadow: 0 0 10px 1px rgb(185, 230, 255);
+    box-shadow: 0 0 0.4em 0.07em rgb(39, 0, 39);
   }
   .TopNewsPictures{
     width: 327.45;
     height: 185;
   }
-  article{
-    background-color: rgb(188, 247, 255);
-    font-size: 30px;
+  section{
+    
+    font-size: 1.45em;
     font-family: 'Yanone Kaffeesatz',sans-serif;
-    border-radius: 10px;
-    box-shadow:  0 0 2px 1px rgb(0, 0, 0);
-    padding-right: -20%;
-    padding-left: 4%;
-    padding-top: 2%;
-    padding-bottom: 4%;
-    margin-left: 15%;
-    margin-right: 15%;
-    margin-bottom: 2%;
     font-weight: 400;
+  }
+  .main-section
+  {
+    padding-right: -2em;
+    padding-left: 2em;
+    padding-top: 1em;
+    padding-bottom: 2em;
+    margin-left: 5em;
+    margin-right: 15em;
+    margin-bottom: 0.2em;
+    margin-top: -0.6em;
+  }
+  #profile{
+    right: 0;
+    position:fixed;
+  }
+  .profiles{
+    padding-right: 3em;
+    padding-left: 1em;
+    padding-top: 0.5em;
+    margin-left: 0.2em;
+    margin-right: 1em;
+    margin-bottom: 1em;
+  }
+
+  .border-background
+  {
+    background-color: rgb(255, 255, 255);
+    border:solid 0.006em rgb(26, 24, 24);
+  }
+  .smallLogos
+  {
+    width:2.4em;
+    height: 1.35em;
+  }
+  .smallPfp
+  {
+    margin-left: 2em;
+    width: 2em;
+    height: 2em;
+    border-radius: 2em;
   }
   /*==================================================*/
   /* /Main Page */
