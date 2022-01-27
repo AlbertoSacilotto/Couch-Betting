@@ -99,6 +99,7 @@ body::-webkit-scrollbar {
 /*==================================================*/
 /*/Nav bar*/
 
+/*==================================================*/
 /* Main Page */
   .grid-container {
     display: grid;
@@ -157,5 +158,248 @@ body::-webkit-scrollbar {
     margin-bottom: 2%;
     font-weight: 400;
   }
-
+  /*==================================================*/
   /* /Main Page */
+
+
+  /* Login */ 
+  /*==================================================*/
+
+  #login-Body {
+    background-color: rgb(240, 240, 240);
+    background-image: none;
+    height: 92vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center;
+  }
+
+  #login-Div {
+    background-color: violet;
+    width: 70em;
+    height: 40em;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-areas: "side main";
+    border-radius: 2em;
+    box-shadow: 0 0 1em -0.125em rgba(0,0,0,.5);
+  }
+
+  #login-Side {
+    background-image: url(/Images/PL\ pink\ side.jpg);
+    opacity: 0.875;
+    background-color: #270027;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .login-Side-Content {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-decoration: none;
+    /*-webkit-text-stroke: 0.2px rgb(0, 0, 0);
+    font-weight: 7000; */   
+  }
+
+  #login-Side-Header {
+    font-size: 3em;
+    margin-bottom: 1em;
+  }
+
+  .login-Side-Paragraph {
+    font-size: 1.2em;
+    margin: 0.3em;
+    font-weight: 7000;
+  }
+
+  #login-Side-Button {
+    background-color: purple;
+    margin-top: 4em;
+    padding: 1.5em 6em;
+    border: white 1px;
+    border-style: solid;
+    border-radius: 2em;
+    box-shadow: 0 0 1em -0.125em rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    
+  }
+
+  #login-Side-Button:hover {
+    background-color: rgb(104, 0, 104);
+    transition: 0.2s;
+  }
+
+  #login-Main {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #login-Main-Header {
+    font-size: 3em;
+    margin-bottom: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: purple;
+    cursor:pointer;
+  }
+
+  .login-Main-Input {
+    background-color: #f4f8f8;
+    color: #757575;
+    font-size: 1.3em;
+    padding: 0.7em ;
+    padding-right: 7em;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+  }
+
+  #login-Main-Button {
+    background-color: purple;
+    margin-top: 4em;
+    padding: 1.5em 6em;
+    border-radius: 2em;
+    border: none;
+    margin-top: 0em;
+    margin-bottom: 0em;
+    cursor: pointer;
+  }
+
+  #login-Main-Button:hover {
+    background-color: rgb(104, 0, 104);
+    transition: 0.2s;
+  }
+  /*==================================================*/
+  /* /Login */
+
+
+  /* Signup */ 
+  /*==================================================*/
+
+  #signup-Body {
+    background-color: rgb(240, 240, 240);
+    background-image: none;
+    height: 92vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center;
+  }
+
+  #signup-Div {
+    background-color: violet;
+    width: 70em;
+    height: 40em;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-areas: "side main";
+    border-radius: 2em;
+    box-shadow: 0 0 1em -0.125em rgba(0,0,0,.5);
+  
+  }
+
+  #signup-Side {
+    background-image: url(/Images/PL\ dgreen\ side.jpg);
+    opacity: 0.875;
+    background-color: #06d98b;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .signup-Side-Content {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-decoration: none;
+    /*-webkit-text-stroke: 0.2px rgb(0, 0, 0);
+    font-weight: 7000; */   
+  }
+
+  #signup-Side-Header {
+    font-size: 3em;
+    margin-bottom: 1em;
+  }
+
+  .signup-Side-Paragraph {
+    font-size: 1.2em;
+    margin: 0.3em;
+    font-weight: 7000;
+  }
+
+  #signup-Side-Button {
+    background-color: #03cf84;
+    margin-top: 4em;
+    padding: 1.5em 6em;
+    border: white 1px;
+    border-style: solid;
+    border-radius: 2em;
+    box-shadow: 0 0 1em -0.125em rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    
+  }
+
+  #signup-Side-Button:hover {
+    background-color: #05a76b;
+    transition: 0.2s;
+  }
+
+  #signup-Main {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #signup-Main-Header {
+    font-size: 3em;
+    margin-bottom: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #03cf84;
+    cursor:pointer;
+  }
+
+  .signup-Main-Input {
+    background-color: #f4f8f8;
+    color: #757575;
+    font-size: 1.3em;
+    padding: 0.7em ;
+    padding-right: 7em;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+  }
+
+  #signup-Main-Button {
+    background-color: #03cf84;
+    margin-top: 4em;
+    padding: 1.5em 6em;
+    border-radius: 2em;
+    border: none;
+    margin-top: 0em;
+    margin-bottom: 0em;
+    cursor: pointer;
+  }
+
+  #signup-Main-Button:hover {
+    background-color: #05a76b;
+    transition: 0.2s;
+  }
+
+  #forgot-Password {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 0em;
+    margin-bottom: 4em;
+    color: #757575;
+  }
+
+  /*==================================================*/
+  /* /Singup */
