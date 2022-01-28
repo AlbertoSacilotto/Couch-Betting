@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap');
 body {
-  background-image: url(/Images/CouchBack\ PSves.jpg);
+  background-color:white;
   background-attachment:fixed;
   background-size:cover;
   width: 100%;
@@ -13,7 +13,7 @@ body {
     margin-top: -1.25em;
     padding-bottom: 5.5em;
     overflow: hidden;
-    background-color: #270027;
+    background-color: #ffffff;
     height: 5em;
     width: 120.2em;
     box-shadow: 0 0.625em 0.625em -0.125em rgba(0,0,0,.5);
@@ -24,21 +24,22 @@ body {
   }
   
   .navText {
-    font-family: 'Yanone Kaffeesatz', sans-serif;
-    font-size: 2.0625em;
+    font-family: dm sans,Sans-serif;
+    font-size: 1.85em;
+    font-weight: 500;
     text-decoration: none;
     display: block;
-    color: white;
+    color: rgb(0, 0, 0);
     border: 0.625em;
-    border-color: white;
+    border-color: rgb(255, 255, 255);
     text-align: center;
     padding: 0.1em 1.3em;
   }
 
   .navText:hover {
     text-align: center;
-    color: #00ffa1;
-    margin-top: -5px;
+    color: #52ab98;
+    margin-top: -3.5px;
     transition: 0.2s;
     text-decoration: none;
   }
@@ -54,44 +55,41 @@ body {
   }
 
   #signup{
-    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-family: dm sans,Sans-serif;
     font-size: 2.0625em;
     text-decoration: none;
-    color: white;
-    background-color: rgb(39, 0, 39);;
+    color: rgb(255, 255, 255);
+    background-color: #52ab98;
     margin-left: 1.2em;
     margin-right: 1.2em;
-    padding: 0.35em;
-    padding-left: 0.875em;
-    padding-right: 0.875em;
-    border: 0.3125em black;    
-    border-radius: 5px;
+    padding: 0.2em;
+    padding-left: 0.375em;
+    padding-right: 0.375em;   
+    border-radius: 0.1em;
   }
 
   #signup:hover{
-    color:rgb(44, 38, 38);
-    background-color: #00ffa1;
-    transition: 1s;
+    background-color: #328b78;
+    transition: 0.2s;
   }
 
   #login{
-    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-family: dm sans,Sans-serif;
     font-size: 2.0625em;
     text-decoration: none;
-    color: white;
-    background-color: rgb(39, 0, 39);
+    color: #52ab98;
+    background-color: white;
+    border: solid 0.1em #52ab98;
     /*background-color: rgb(44, 38, 38);*/
-    padding: 0.35em;
-    padding-left: 0.875em;
-    padding-right: 0.875em;
-    border: 5px black;    
-    border-radius: 5px;
+    padding: 0.1em;
+    padding-left: 0.275em;
+    padding-right: 0.275em;  
+    border-radius: 0.1em;
   }
 
   #login:hover{
-    color:rgb(44, 38, 38);
-    background-color: #00ffa1;
-    transition: 1s;
+    background-color: #dfdfdf;
+    transition: 0.2s;
   }
 /*==================================================*/
 /*/Nav bar*/
@@ -186,6 +184,51 @@ body {
     width: 2em;
     height: 2em;
     border-radius: 2em;
+  }
+  #gridHome
+  {
+    display: grid;
+    grid-template-columns: 25% 55% 20%;
+    grid-template-rows: 869px ;
+    grid-template-areas: "NewsColumn HomeContent LiveGamesColumn";
+    margin-top: -1em;
+  }
+
+  #NewsColumn
+  {
+    grid-area: "NewsColumn";
+    background-color: #2b6777;
+    border: solid 0.09em #235a69;
+    padding-left: 1.5em;
+    padding-top: 0.5em;
+  }
+  #Home
+  {
+    grid-area: "HomeContent";
+    background-color: #c8d8e4;
+    border: solid 0.09em #a9bbc7;
+    padding-left: 1.75em;
+    padding-top: 0.5em;
+  }
+  #LiveGamesColumn
+  {
+    grid-area: "LiveGamesColumn";
+    background-color: #f2f2f2;
+    border: solid 0.09em rgb(173, 187, 196);
+    padding-left: 1.5em;
+    padding-top: 0.5em;
+  }
+  .LiveGamesInHome
+  {
+    margin-top: 1em;
+    margin-bottom: 6em;
+    margin-left: 1em;
+  }
+  .NewsInHome
+  {
+    margin-top: 1em;
+    margin-bottom: 6em;
+    margin-left: 1em;
   }
   /*==================================================*/
   /* /Main Page */
