@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Couch Betting</title>
 </head>
 <body>
@@ -15,60 +15,65 @@
             <li class="navSpace"><a class="navText" href="games.html">Games</a></li>
             <li class="navSpace"><a class="navText" href="news.html">News</a></li> 
             <li class="navSpace"><a class="navText" href="fantasyLeauge.html">Fantasy Leauge</a></li>
-            <li class="navSpace"><a class="navText" href="gamePredicition.html">Game Predicitions</a></li>
+            <li class="navSpace"><a class="navText" href="gamePredicition.html">Betting</a></li>
             <li class="navSpace"><a class="navText" href="aboutus.html">About Us</a></li>
             <li class="navSpaceRightBound"><a id="signup" href="login.html">Sign Up</a></li>
             <li class="navSpaceRightBound"><a id="login" href="signup.html">Login</a></li>
         </ul>
     </nav>
     <article id="gridHome">
-        <div id ="NewsColumn">
-            <h1>Current Top News</h1>
-            <div class="NewsInHome">
-                <h3>Headline</h3>
-                <img src="" alt="News image">
-                <p>description</p>
+        
+        
+        <div id="LiveGamesColumn">
+            <h1> Live Games Score</h1>
+            <div class="LiveGamesInHome">
+                <h3>Team1 - Team2</h3>
+                <h4>Score : Score</h4>
+                <p>Current Minute</p>
             </div>
-            <div class="NewsInHome">
-                <h3>Headline</h3>
-                <img src="" alt="News image">
-                <p>description</p>
+            <div class="LiveGamesInHome">
+                <h3>Team1 - Team2</h3>
+                <h4>Score : Score</h4>
+                <p>Current Minute</p>
             </div>
-            <div class="NewsInHome">
-                <h3>Headline</h3>
-                <img src="" alt="News image">
-                <p>description</p>
+            <div class="LiveGamesInHome">
+                <h3>Team1 - Team2</h3>
+                <h4>Score : Score</h4>
+                <p>Current Minute</p>
+            </div>
+            <div class="LiveGamesInHome">
+                <h3>Team1 - Team2</h3>
+                <h4>Score : Score</h4>
+                <p>Current Minute</p>
             </div>
         </div>
         <div id="Home">
-            <div>
-                <h1>Home</h1>
-                <p>Hello</p>
-            </div>
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="Images/HomePic1.jpg" class="d-block w-100 HomeDiashowPics" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="Images/HomePic2.jpg" class="d-block w-100 HomeDiashowPics" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="Images/HomePic3.jpg" class="d-block w-100 HomeDiashowPics" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
         </div>
-        <div id="LiveGamesColumn">
-            <h1>Live Games Score</h1>
-            <div class="LiveGamesInHome">
-                <h3>Team1 - Team2</h3>
-                <h4>Score : Score</h4>
-                <p>Current Minute</p>
-            </div>
-            <div class="LiveGamesInHome">
-                <h3>Team1 - Team2</h3>
-                <h4>Score : Score</h4>
-                <p>Current Minute</p>
-            </div>
-            <div class="LiveGamesInHome">
-                <h3>Team1 - Team2</h3>
-                <h4>Score : Score</h4>
-                <p>Current Minute</p>
-            </div>
-            <div class="LiveGamesInHome">
-                <h3>Team1 - Team2</h3>
-                <h4>Score : Score</h4>
-                <p>Current Minute</p>
-            </div>
-        </div>
+        
     </article>
 </body>
+<footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</footer>
 </html>
