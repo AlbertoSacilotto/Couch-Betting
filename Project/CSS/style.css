@@ -16,7 +16,6 @@ body {
     background-color: #ffffff;
     height: 5em;
     width: 120.2em;
-    box-shadow: 0 0.625em 0.625em -0.125em rgba(0,0,0,.5);
   }
   
   nav > ul > li {
@@ -25,7 +24,7 @@ body {
   
   .navText {
     font-family: dm sans,Sans-serif;
-    font-size: 1.85em;
+    font-size: 1.8em;
     font-weight: 500;
     text-decoration: none;
     display: block;
@@ -39,7 +38,7 @@ body {
   .navText:hover {
     text-align: center;
     color: #52ab98;
-    margin-top: -3.5px;
+    margin-top: -2.5px;
     transition: 0.2s;
     text-decoration: none;
   }
@@ -65,7 +64,7 @@ body {
     padding: 0.2em;
     padding-left: 0.375em;
     padding-right: 0.375em;   
-    border-radius: 0.1em;
+    border-radius: 0.2em;
   }
 
   #signup:hover{
@@ -79,15 +78,17 @@ body {
     text-decoration: none;
     color: #52ab98;
     background-color: white;
-    border: solid 0.1em #52ab98;
     /*background-color: rgb(44, 38, 38);*/
     padding: 0.1em;
     padding-left: 0.275em;
     padding-right: 0.275em;  
-    border-radius: 0.1em;
+    
   }
 
   #login:hover{
+    padding-right: 0.175em;
+    border-radius: 0.2em;
+    border: solid 0.1em #52ab98;
     background-color: #dfdfdf;
     transition: 0.2s;
   }
@@ -137,12 +138,6 @@ body {
   .TopNewsPictures{
     width: 327.45;
     height: 185;
-  }
-  section{
-    
-    font-size: 1.45em;
-    font-family: 'Yanone Kaffeesatz',sans-serif;
-    font-weight: 400;
   }
   .main-section
   {
@@ -201,6 +196,7 @@ body {
     border: solid 0.09em #235a69;
     padding-left: 1.5em;
     padding-top: 0.5em;
+    color: white;
   }
   #Home
   {
@@ -209,6 +205,7 @@ body {
     border: solid 0.09em #a9bbc7;
     padding-left: 1.75em;
     padding-top: 0.5em;
+    color:#2b6777;
   }
   #LiveGamesColumn
   {
@@ -229,6 +226,31 @@ body {
     margin-top: 1em;
     margin-bottom: 6em;
     margin-left: 1em;
+  }
+  #gridGames
+  {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 469px 400px;
+    grid-template-areas: "Games Playing"
+                         "Upcoming Upcoming";
+  }
+  #Games{
+    grid-area: "Games";
+    background-color: #c8d8e4;
+    border:solid #b2c0ca 0.09em;
+  }
+  #Playing
+  {
+    grid-area: "Playing";
+    background-color: #ffffff;
+    border:solid #e2e2e2 0.09em;
+  }
+  #Upcoming
+  {
+    grid-area: "Upcoming";
+    background-color: #2b6777;
+    border:solid #245563 0.09em;
   }
   /*==================================================*/
   /* /Main Page */
