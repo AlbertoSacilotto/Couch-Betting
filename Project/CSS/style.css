@@ -8,6 +8,12 @@ body {
 
 /*Nav bar*/
 /*==================================================*/
+  #nav-position {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
   #ulNav {
     list-style-type: none;
     margin-left: -1.25em;
@@ -19,6 +25,13 @@ body {
     height: 5em;
     width: 101.05%;
   }
+
+  @media screen and (max-width: 1000px) {
+    #ulNav {
+      overflow-y: scroll;
+    }
+  }
+
   
   nav > ul > li {
     display: inline;
@@ -232,6 +245,7 @@ body {
   #ProfilesColumn
   {
     grid-area:Profiles;
+    margin-top: 5em;
     position:fixed;
     right:0;
     border-top: solid #97fb57 0.2em;
@@ -262,8 +276,201 @@ body {
     margin-right: 5em;
     border:#97fb57
   }
+
   /*==================================================*/
   /* /Main Page */
+
+  /* Betting */
+  /*==================================================*/
+
+  #betting-body
+  {
+    background-color: #97fb57;
+  }
+  #betting-container
+  {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-top: 4.3em;
+    text-align: center;
+  }
+  .betting-content
+  {
+    background-color: #121212;
+    margin: 0.3em;
+    padding: 2em 0;
+    height: 100em;
+  }
+  .betting-content h1
+  {
+    color: white;
+    font-size: 4em;
+    margin-bottom: 1em;
+  }
+  .betting-content p
+  {
+    color: white;
+    padding: 1em 0;
+    font-size: x-large;
+  }
+
+  .betting-content a 
+  {
+    color: black;
+    background-color: #97fb57;
+    padding: 0.5em 1em;
+    font-size: large;
+    font-weight: 500;
+    border: 3px solid #97fb57;
+    border-radius: 1em;
+  }
+
+  .betting-content button
+  {
+    color: white;
+    background-color: #121212;
+    padding: 0.5em 1em;
+    font-size: large;
+    font-weight: 500;
+    border: 3px solid #97fb57;
+    border-radius: 1em;
+  }
+  .betting-content button:hover
+  {
+    color: black;
+    background-color: #97fb57;
+  }
+  .betting-content div
+  {
+    border-top: 3px solid #97fb57;
+    border-bottom: 3px solid #97fb57;
+    padding-bottom: 1.5em;
+  }
+
+  /*==================================================*/
+  /* /Betting */
+
+  /* News Page */
+  /*==================================================*/
+
+  #news-body
+  {
+    background-color: #121212;
+  }
+  #news-grid-container
+  {
+    height: 50em;
+    display: grid;
+    grid-template-columns: 25% auto;
+    grid-template-areas: "side main";
+    margin-top: 4.3em;
+  }
+  #news-grid-side
+  {
+    border: 6px solid rgb(0, 0, 0);
+    background-color: #80dd46;
+    grid-area: side;
+    margin: 1em;
+  }
+  #news-grid-main
+  {
+    grid-area: main;
+    padding: none;
+    margin: none;
+  }
+  #news-side-header 
+  {
+    font-size: 60px;
+    text-align: center;
+  }
+  #news-main-header 
+  {
+    margin: 0.5em 0em;
+    color: white;
+    font-size: 50px;
+    text-align: center;
+  }
+  #news-div-searchbar
+  {
+    text-align: center;
+  }
+  #news-searchbar
+  {
+    font-size: large;
+    padding: 0.5em;
+    padding-right: 20em;
+    border-radius: 1em;
+    border: 3px solid #97fb57;
+    margin-bottom: 2em;
+  }
+  .news-main-p
+  {
+    color: white;
+    font-size: x-large;
+    padding: 0em 2em;
+  }
+  #news-img-div
+  {
+    margin: 4em 0em;
+    color: rgb(184, 184, 184);
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .news-img-binder
+  {
+    width: 500px;
+  }
+  .news-img
+  {
+    border: 3px solid #97fb57;
+  }
+  thead 
+  {
+    font-weight: bolder;
+  }
+  thead:hover
+  {
+    background-color: #97fb57;
+  }
+  .th
+  {
+    background-color: #97fb57;
+    font-size: large;
+    font-weight: bolder;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    margin: 1em;
+    padding: 0.5em 1em;
+    text-align: center;
+    height: 4em;
+  }
+  .tr 
+  {
+    background-color: #97fb57;
+    font-weight: bold;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    margin: 1em;
+    padding: 0.5em 1em;
+    text-align: center;
+    height: 4em;
+  }
+  .tr:hover
+  {
+    color: white;
+    background-image: linear-gradient(to right, rgb(113, 0, 179),rgb(255, 0, 76));
+    transition: 0.4s;
+  }
+  td
+  {
+    padding: 0.5em;
+  }
+  
+  /*==================================================*/
+  /* /News Page */
+
 
 
   /* Login */ 
