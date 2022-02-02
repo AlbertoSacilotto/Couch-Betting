@@ -1,22 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap');
 body {
-  background-image: url(/Images/CouchBack\ PSves.jpg);
+  background-color:#000000;
   background-attachment:fixed;
   background-size:cover;
   width: 100%;
 }
+
 /*Nav bar*/
 /*==================================================*/
   #ulNav {
     list-style-type: none;
     margin-left: -1.25em;
     margin-top: -1.25em;
+    margin-right: 1em;
     padding-bottom: 5.5em;
     overflow: hidden;
-    background-color: #270027;
+    background-color: #000000;
     height: 5em;
-    width: 120.2em;
-    box-shadow: 0 0.625em 0.625em -0.125em rgba(0,0,0,.5);
+    width: 101.05%;
   }
   
   nav > ul > li {
@@ -24,21 +25,22 @@ body {
   }
   
   .navText {
-    font-family: 'Yanone Kaffeesatz', sans-serif;
-    font-size: 2.0625em;
+    font-family: helvetica,arial,sans-serif;
+    font-size: 1.8em;
+    font-weight: 500;
     text-decoration: none;
     display: block;
-    color: white;
+    color: #f6f2f2;
     border: 0.625em;
-    border-color: white;
+    border-color: rgb(255, 255, 255);
     text-align: center;
     padding: 0.1em 1.3em;
   }
 
   .navText:hover {
     text-align: center;
-    color: #00ffa1;
-    margin-top: -5px;
+    color: #97fb57;
+    margin-top: -2.5px;
     transition: 0.2s;
     text-decoration: none;
   }
@@ -54,120 +56,56 @@ body {
   }
 
   #signup{
-    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-family: helvetica,arial,sans-serif;
     font-size: 2.0625em;
     text-decoration: none;
-    color: white;
-    background-color: rgb(39, 0, 39);;
+    color: #000000;
+    background-color: #97fb57;
     margin-left: 1.2em;
-    margin-right: 1.2em;
-    padding: 0.35em;
-    padding-left: 0.875em;
-    padding-right: 0.875em;
-    border: 0.3125em black;    
-    border-radius: 5px;
+    margin-right: 0.2em;
+    padding: 0.2em;
+    padding-left: 0.375em;
+    padding-right: 0.375em;   
+    border-radius: 0.2em;
   }
 
   #signup:hover{
-    color:rgb(44, 38, 38);
-    background-color: #00ffa1;
-    transition: 1s;
+    background-color: #4a7a2d;
+    transition: 0.2s;
   }
 
   #login{
-    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-family: helvetica,arial,sans-serif;
     font-size: 2.0625em;
     text-decoration: none;
-    color: white;
-    background-color: rgb(39, 0, 39);
-    /*background-color: rgb(44, 38, 38);*/
-    padding: 0.35em;
-    padding-left: 0.875em;
-    padding-right: 0.875em;
-    border: 5px black;    
-    border-radius: 5px;
+    color: #97fb57;
+    background-color: #000000;
+    padding: 0.1em;
+    padding-left: 0.275em;
+    padding-right: 0.275em;  
+    
   }
 
   #login:hover{
-    color:rgb(44, 38, 38);
-    background-color: #00ffa1;
-    transition: 1s;
+    padding-right: 0.175em;
+    border-radius: 0.2em;
+    border: solid 0.1em #97fb57;
+    background-color: #000000;
+    transition: 0.08s;
   }
 /*==================================================*/
 /*/Nav bar*/
 
 /*==================================================*/
 /* Main Page */
-  .grid-container {
-    display: grid;
-    grid-template-columns: 32% 69%;  
-    padding-top: 71px;
-    margin-right: -9px;
-    margin-left: -9px;
-    margin-bottom: 2000px;
-    
-  }
-  #grid-item-left {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: rgb(188, 247, 255);
-    color:rgb(27, 27, 27);
-    font-size: 30px;
-    text-align: center;
-  }
-
-  #grid-item-right {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: rgba(255, 255, 255, 0.85);
-    color:rgb(27, 27, 27);
-    border-left: 5px solid rgba(0, 202, 182, 0.472);
-    font-size: 30px;
-    text-align: left;
-    padding-left: 1em;
-  }
-
-  .mediumPictures {
-    width: 28.5%;
-    height: 16%;
-    border-radius: 10px;
-    margin-left: 15%;
-    margin-right: -2.3%;
-    box-shadow:  0 0 0.2em 0.02em rgb(0, 0, 0);
-  }
-  .mediumPictures:hover{
-    box-shadow: 0 0 0.4em 0.07em rgb(39, 0, 39);
+  article{
+    background-color:#000000;
+    font-family: helvetica,arial,sans-serif;
+    font-weight: 500;
   }
   .TopNewsPictures{
     width: 327.45;
     height: 185;
-  }
-  section{
-    
-    font-size: 1.45em;
-    font-family: 'Yanone Kaffeesatz',sans-serif;
-    font-weight: 400;
-  }
-  .main-section
-  {
-    padding-right: -2em;
-    padding-left: 2em;
-    padding-top: 1em;
-    padding-bottom: 2em;
-    margin-left: 5em;
-    margin-right: 15em;
-    margin-bottom: 0.2em;
-    margin-top: -0.6em;
-  }
-  #profile{
-    right: 0;
-    position:fixed;
-  }
-  .profiles{
-    padding-right: 3em;
-    padding-left: 1em;
-    padding-top: 0.5em;
-    margin-left: 0.2em;
-    margin-right: 1em;
-    margin-bottom: 1em;
   }
 
   .border-background
@@ -175,17 +113,135 @@ body {
     background-color: rgb(255, 255, 255);
     border:solid 0.006em rgb(26, 24, 24);
   }
-  .smallLogos
-  {
-    width:2.4em;
-    height: 1.35em;
-  }
   .smallPfp
   {
     margin-left: 2em;
     width: 2em;
     height: 2em;
     border-radius: 2em;
+  }
+  .smallPfp:hover{
+    width: 2.2em;
+    height: 2.2em;
+  }
+  #gridHome
+  {
+    
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 869px ;
+    grid-template-areas: "LiveGamesColumn HomeContent";
+    margin-top: -1em;
+  }
+  #Home
+  {
+    grid-area: "HomeContent";
+    background-color: #97fb57;
+    border: solid 0.09em #97fb57;
+    color:#f6f2f2;
+    font-weight: 600;
+    padding-top:0.1em ;
+    padding-left: 0.1em;
+    padding-right: 0.1em;
+  }
+  .HomeDiashowPics
+  {
+    width: 80%em;
+    height: 45%;
+  }
+  #LiveGamesColumn
+  {
+    grid-area: "LiveGamesColumn";
+    background-color: #121212;
+    border: solid 0.2em #97fb57;
+    border-left: none;
+    padding-left: 1.5em;
+    padding-top: 1em;
+    color: #f6f2f2;
+  }
+  .LiveGamesInHome
+  {
+    margin-top: 1em;
+    margin-bottom: 6em;
+    margin-left: 1em;
+    
+  }
+  
+  #gridGames
+  {
+    margin-top: -1em;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 469px 400px;
+    grid-template-areas: "Playing Games"
+                         "Upcoming Games";
+  }
+  #Games{
+    grid-area: "Games";
+    height: 185.3%;
+    background-color: #c8d8e4;
+    border:solid #b2c0ca 0.09em;
+  }
+  #Playing
+  {
+    grid-area: "Playing";
+    background-color: #ffffff;
+    border:solid #e2e2e2 0.09em;
+  }
+  #Upcoming
+  {
+    grid-area: "Upcoming";
+    background-color: #2b6777;
+    border:solid #245563 0.09em;
+  }
+  #gridAboutUs
+  {
+    margin-top: -1em;
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-rows: 869;;
+    grid-template-areas: "AboutUs Profiles";
+  }
+  #AboutUsColumn
+  {
+    grid-area:AboutUs;
+    background-color: #121212;
+    color: #f6f2f2;
+    padding-left: 3em;
+    padding-top: 2em;
+    border-top: solid 0.2em #97fb57;
+    border-right: solid 0.1em #97fb57
+    
+  }
+  #ProfilesColumn
+  {
+    grid-area:Profiles;
+    position:fixed;
+    right:0;
+    border-top: solid #97fb57 0.2em;
+  }
+  .Profiles
+  {
+    background-color: #97fb57;
+    border-radius: 0.4em;
+    margin-right: 2.25em;
+    margin-top: 2em;
+    padding: 1em;
+  }
+  .aboutUsPics{
+    width:20em;
+    height: 11.25em;
+    margin-bottom: 2em;
+    border-radius: 0.6em;
+  }
+  #HTLPic
+  {
+    float:right;
+    margin-top: -12em;
+    width:32em;
+    height: 18em;
+    margin-right: 5em;
+    border:#97fb57
   }
   /*==================================================*/
   /* /Main Page */
