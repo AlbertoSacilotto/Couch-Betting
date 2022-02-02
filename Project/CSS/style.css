@@ -172,27 +172,41 @@ body {
     margin-top: -1em;
     display: grid;
     grid-template-columns: 20% 80%;
-    grid-template-rows: 469px 400px;
+    grid-template-rows: 44% 44%;
     grid-template-areas: "Playing Games"
                          "Upcoming Games";
   }
   #Games{
     grid-area: "Games";
-    height: 185.3%;
-    background-color: #c8d8e4;
+    height: 200%;
+    background-color: #121212;
     border:solid #b2c0ca 0.09em;
+    padding: 1em;
+    color: #f6f2f2;
   }
   #Playing
   {
     grid-area: "Playing";
-    background-color: #ffffff;
-    border:solid #e2e2e2 0.09em;
+    background-color: #909090;
+    border:solid #161616 0.09em;
+    color: #f6f2f2;
+    border-radius: 0.2em;
+    margin-top: 0.2em;
+    margin-bottom: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+    padding: 1em;
   }
   #Upcoming
   {
     grid-area: "Upcoming";
-    background-color: #2b6777;
+    background-color: #97fb57;
     border:solid #245563 0.09em;
+    border-radius: 0.2em;
+
+    margin-left: 1em;
+    margin-right: 1em;
+    padding: 1em;
   }
   #gridAboutUs
   {
@@ -233,6 +247,9 @@ body {
     height: 11.25em;
     margin-bottom: 2em;
     border-radius: 0.6em;
+  }
+  .aboutUsPics:hover{
+    box-shadow: 0em 0em 0.2em 0.06em #97fb57;
   }
   #HTLPic
   {
