@@ -180,7 +180,8 @@ body {
     grid-area: "Games";
     height: 200%;
     background-color: #121212;
-    border:solid #b2c0ca 0.09em;
+    border-left:solid #97fb57 0.1em;
+    border-top: solid #97fb57 0.2em;
     padding: 1em;
     color: #f6f2f2;
   }
@@ -188,10 +189,10 @@ body {
   {
     grid-area: "Playing";
     background-color: #909090;
-    border:solid #161616 0.09em;
+    border:solid #97fb57 0.1em;
+    border-top: solid #97fb57 0.2em;
     color: #f6f2f2;
     border-radius: 0.2em;
-    margin-top: 0.2em;
     margin-bottom: 1em;
     margin-left: 1em;
     margin-right: 1em;
@@ -201,7 +202,8 @@ body {
   {
     grid-area: "Upcoming";
     background-color: #97fb57;
-    border:solid #245563 0.09em;
+    border:solid #97fb57 0.2em;
+    border-top: solid #97fb57 0.1em;
     border-radius: 0.2em;
 
     margin-left: 1em;
