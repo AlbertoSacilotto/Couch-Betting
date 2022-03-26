@@ -7,17 +7,17 @@
           <a class="nav-link navText text-white" href="/news">News</a>
           <a class="nav-link navText text-white" href="/fantasyleague">Fantasy Leauge</a>
           <a class="nav-link navText text-white" href="/betting">Betting</a>
-          <a class="nav-link navText text-white" href="/about">About Us</a>
+          <a class="nav-link navText text-white" href="/about">About</a>
           
         </div>
       </div>
       <div class="d-flex">
-        <li>
+        <div>
           <a class="nav-link navText text-white rounded" id="login" href="/login">Log In</a>
-        </li>
-        <li>
+        </div>
+        <div>
           <a class="nav-link navText rounded" id="signup" href="/signup">Sign Up</a>
-        </li>
+        </div>
     </div>
     </div>
   </nav>
