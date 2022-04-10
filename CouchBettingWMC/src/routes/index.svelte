@@ -1,15 +1,12 @@
 <script lang="ts">
-    let games = [
-        {teams: "Chelsea - Man City", scores: "3 : 1", minute: 89}, //Eigentlich ist es eher Team1: Chelsea statt alles zusammen
-        {teams: "Southhampton - Liverpool", scores: "0 : 3", minute: 65},
-        {teams: "Totenham - Man Utd.", scores: "2 : 2", minute: 45}
-    ];
+    import {GetLiveGames} from "../stores/livegames";
+    import { onMount } from "svelte";
+    let games;
 
-    let diashowPictures = [
-        "caro4.jpg",
-        "diashow2.jpeg",
-        "diashow3.jpeg"
-    ];
+    onMount(async function () {
+        games = await GetLiveGames();
+        console.log(games);
+    });
 </script>
 <svelte:head>
     <title>Couch Betting - Home</title>
@@ -54,13 +51,17 @@
     </div>
     <div id="LiveGamesCol" class="m-1 pt-4 text-center rounded-bottom">
         <h3> Live Games Score</h3>
-        {#each games as game}
-            <div class="mt-5">
-                <p>{game.teams}</p>
-                <p>{game.scores}</p>
-                <p>{game.minute}'</p>
-            </div>
-        {/each}
+        <!--<ul>
+            {#if games != undefined || games != null}
+                {#each games as game}
+                    <h5>{game.home} - {game.guest}</h5>
+                    <h6>{game.goalsHome} - {game.goalsGuest}</h6>
+                    <p>{game.minute}</p>
+                {/each}
+            {:else}
+                <p>Games are still loading</p>
+            {/if}
+        </ul>-->
         <div class="LiveGamesInHome mt-5">
             <a class="btn btn-xs" id="buttonBetHome" href="/betting">Bet Now</a>
         </div>
