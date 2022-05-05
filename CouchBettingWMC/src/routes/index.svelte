@@ -1,4 +1,5 @@
 <script lang="ts">
+
     import UpcomingCard from "../components/upcomingCard.svelte"
     import LiveCard from "../components/liveCard.svelte"
 
@@ -8,9 +9,9 @@
     let liveGames;
     let upcomingGames;
     onMount(async function () {
-            liveGames = await GetLiveGames();
-            upcomingGames = await GetUpcomingGames();
-    });
+        liveGames = await GetLiveGames();
+        upcomingGames = await GetUpcomingGames();
+    })
 </script>
 <svelte:head>
     <title>Couch Betting - Home</title>
@@ -60,7 +61,7 @@
                 {#each upcomingGames as game}
                     <UpcomingCard upcomingGame={game}/>
                 {/each}
-            {:else if (upcomingGames == undefined || upcomingGames == null) &&(liveGames == undefined || liveGames == null)}
+            {:else if (upcomingGames == undefined || upcomingGames == null) && (liveGames == undefined || liveGames == null)}
                 <p>Games are still loading</p>
             {:else}
                 <h2>Live Games</h2>
@@ -111,11 +112,6 @@
   {
       width: 100%;
       height: 100%;
-  }
-  #buttonBetHome
-  {
-      background-color: #A239CA;
-      color: #E7DFDD;
   }
 
 </style>

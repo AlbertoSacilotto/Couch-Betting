@@ -71,3 +71,4 @@ export async function GetUpcomingGames() : Promise<any> {
         .catch(err => console.error(err));
     return upcomingGames;
 }
+
