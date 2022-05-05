@@ -1,11 +1,15 @@
 <script lang="ts">
-    import {GetLiveGames} from "../stores/livegames";
-    import { onMount } from "svelte";
-    let games;
+    import UpcomingCard from "../components/upcomingCard.svelte"
+    import LiveCard from "../components/liveCard.svelte"
 
+    import {GetUpcomingGames} from "../stores/Upcoming-Games";
+    import {GetLiveGames} from "../stores/Live-Games";
+    import { onMount } from "svelte";
+    let liveGames;
+    let upcomingGames;
     onMount(async function () {
-        games = await GetLiveGames();
-        console.log(games);
+            liveGames = await GetLiveGames();
+            upcomingGames = await GetUpcomingGames();
     });
 </script>
 <svelte:head>
@@ -23,13 +27,13 @@
                 </div>
                 <div class="carousel-inner">
                   <div class="carousel-item active">
-                    <img src="../static/caro3.jpeg" class="d-block w-100 HomeCyclePics" alt="...">
+                    <img src="../static/home1.jpg" class="d-block w-100 HomeCyclePics" alt="...">
                   </div>
                   <div class="carousel-item">
-                    <img src="../static/caro3.jpeg" class="d-block w-100 HomeCyclePics" alt="...">
+                    <img src="../static/home2.jpg" class="d-block w-100 HomeCyclePics" alt="...">
                   </div>
                   <div class="carousel-item">
-                    <img src="../static/caro4.jpg" class="d-block w-100 HomeCyclePics" alt="...">
+                    <img src="../static/home3.jpg" class="d-block w-100 HomeCyclePics" alt="...">
                   </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -50,21 +54,25 @@
         
     </div>
     <div id="LiveGamesCol" class="m-1 pt-4 text-center rounded-bottom">
-        <h3> Live Games Score</h3>
-        <!--<ul>
-            {#if games != undefined || games != null}
-                {#each games as game}
-                    <h5>{game.home} - {game.guest}</h5>
-                    <h6>{game.goalsHome} - {game.goalsGuest}</h6>
-                    <p>{game.minute}</p>
+        <ul>
+            {#if (upcomingGames != undefined || upcomingGames != null) && (liveGames == undefined || liveGames == null)}
+                <h2>Upcoming Games</h2>
+                {#each upcomingGames as game}
+                    <UpcomingCard upcomingGame={game}/>
                 {/each}
-            {:else}
+            {:else if (upcomingGames == undefined || upcomingGames == null) &&(liveGames == undefined || liveGames == null)}
                 <p>Games are still loading</p>
+            {:else}
+                <h2>Live Games</h2>
+                {#each liveGames as game}
+                    <LiveCard liveGame={game}/>
+                {/each}
+                <h2>Upcoming Games</h2>
+                {#each upcomingGames as game}
+                    <UpcomingCard upcomingGame={game}/>
+                {/each}
             {/if}
-        </ul>-->
-        <div class="LiveGamesInHome mt-5">
-            <a class="btn btn-xs" id="buttonBetHome" href="/betting">Bet Now</a>
-        </div>
+        </ul>
     </div>
     
     
