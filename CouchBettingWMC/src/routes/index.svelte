@@ -1,11 +1,37 @@
 <script lang="ts">
-    import {GetLiveGames} from "../stores/livegames";
+    import {GetGames} from "../stores/Upcoming-Games";
     import { onMount } from "svelte";
-    let games;
 
+    interface Game{
+        goals: [
+            {
+                home: number,
+                away: number,
+            }
+        ],
+        date: number,
+        teams: [
+            {
+                home: [
+                    {
+                        id: number,
+                        logo: string,
+                        name: string,
+                    }
+                ],
+                away: [
+                    {
+                        id: number,
+                        logo: string,
+                        name: string,
+                    }
+                ]
+            }
+        ]
+    }
+    let temp:Game[];
     onMount(async function () {
-        games = await GetLiveGames();
-        console.log(games);
+        temp = await GetGames();
     });
 </script>
 <svelte:head>
@@ -51,17 +77,15 @@
     </div>
     <div id="LiveGamesCol" class="m-1 pt-4 text-center rounded-bottom">
         <h3> Live Games Score</h3>
-        <!--<ul>
-            {#if games != undefined || games != null}
-                {#each games as game}
-                    <h5>{game.home} - {game.guest}</h5>
-                    <h6>{game.goalsHome} - {game.goalsGuest}</h6>
-                    <p>{game.minute}</p>
+        <ul>
+            {#if temp != undefined || temp != null}
+                {#each temp as game}
+                    <h5>{game.teams.name}</h5>
                 {/each}
             {:else}
                 <p>Games are still loading</p>
             {/if}
-        </ul>-->
+        </ul>
         <div class="LiveGamesInHome mt-5">
             <a class="btn btn-xs" id="buttonBetHome" href="/betting">Bet Now</a>
         </div>
