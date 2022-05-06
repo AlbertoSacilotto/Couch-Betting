@@ -4,7 +4,7 @@
     let news;
     onMount(
         async function (){
-            news = await GetNews();
+            //news = await GetNews();
             console.log(news);
         })
 </script>

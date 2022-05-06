@@ -12,7 +12,7 @@
     let finishedGames = undefined;
     onMount(async function () {
         //liveGames = await GetLiveGames(2);
-        upcomingGames = await GetUpcomingGames(3);
+        upcomingGames = await GetUpcomingGames(4);
         /*upcomingGames = [
             {
                 city: "Burnley",
