@@ -5,12 +5,15 @@
 
     import {GetUpcomingGames} from "../stores/Upcoming-Games";
     import {GetLiveGames} from "../stores/Live-Games";
+    import {GetFinishedGames} from "../stores/Finished-Games";
     import { onMount } from "svelte";
     let liveGames = undefined;
     let upcomingGames = undefined;
+    let finishedGames = undefined;
     onMount(async function () {
-        liveGames = await GetLiveGames();
-        upcomingGames = await GetUpcomingGames();
+        //liveGames = await GetLiveGames(2);
+        upcomingGames = await GetUpcomingGames(2);
+        //finishedGames = await GetFinishedGames(2);
     })
 </script>
 <svelte:head>

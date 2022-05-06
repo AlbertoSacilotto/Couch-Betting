@@ -1,15 +1,17 @@
-export interface UpcomingGame {
+export interface FinishedGames {
     homeImage: string,
     guestImage: string,
     homeName: string,
     guestName: string,
+    homeGoals: number,
+    guestGoals: number,
     date: string,
     stadium: string;
     referee: string;
     city:string;
 }
 
-export async function GetUpcomingGames(length:number) : Promise<any> {
+export async function GetFinishedGames(length:number) : Promise<any> {
     const options = {
         method: 'GET',
         /*headers: {
@@ -37,40 +39,46 @@ export async function GetUpcomingGames(length:number) : Promise<any> {
             'X-RapidAPI-Key': '2c7f13b9bbmshc9acb30687769acp196323jsned8f5c0b4f5a'
         }
     };
-    const upcomingGames: UpcomingGame[] = [];
+
+    const finishedGames: FinishedGames[] = [];
     for(let y = 0; y < length;y++)
     {
-        upcomingGames[y] = {
+        finishedGames[y] = {
             homeImage: "",
             guestImage: "",
             homeName: "",
             guestName: "",
+            homeGoals: 0,
+            guestGoals: 0,
             date: "",
-            stadium: "",
-            referee: "",
-            city: "",
+            stadium:"",
+            referee:"",
+            city:"",
         };
     }
-    await fetch(`https://api-football-beta.p.rapidapi.com/fixtures?season=2021&status=NS&league=39&next=${length}`, options)
+
+    await fetch(`https://api-football-beta.p.rapidapi.com/fixtures?season=2021&status=FT&league=39&last=${length}`, options)
         .then(response => response.json())
         .then(data =>{
             if(data.response != undefined) {
+
                 let x = 0;
                 const list = data.response;
                 list.map(item => {
-                    upcomingGames[x].homeImage = item.teams.home.logo;
-                    upcomingGames[x].guestImage = item.teams.away.logo;
-                    upcomingGames[x].homeName = item.teams.home.name;
-                    upcomingGames[x].guestName = item.teams.away.name;
-                    upcomingGames[x].date = item.fixture.date;
-                    upcomingGames[x].stadium = item.fixture.venue.name;
-                    upcomingGames[x].referee = item.fixture.referee;
-                    upcomingGames[x].city = item.fixture.venue.city;
+                    finishedGames[x].homeImage = item.teams.home.logo;
+                    finishedGames[x].guestImage = item.teams.away.logo;
+                    finishedGames[x].homeName = item.teams.home.name;
+                    finishedGames[x].guestName = item.teams.away.name;
+                    finishedGames[x].homeGoals = item.goals.home;
+                    finishedGames[x].guestGoals = item.goals.away;
+                    finishedGames[x].date = item.fixture.date;
+                    finishedGames[x].stadium = item.fixture.venue.name;
+                    finishedGames[x].referee = item.fixture.referee;
+                    finishedGames[x].referee = item.fixture.venue.city;
                     x++;
                 });
             }
         })
         .catch(err => console.error(err));
-    return upcomingGames;
+    return finishedGames;
 }
-
