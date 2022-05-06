@@ -12,7 +12,42 @@
     let finishedGames = undefined;
     onMount(async function () {
         //liveGames = await GetLiveGames(2);
-        upcomingGames = await GetUpcomingGames(2);
+        upcomingGames = await GetUpcomingGames(3);
+        /*upcomingGames = [
+            {
+                city: "Burnley",
+                date: "2022-05-07",
+                hour: "14:00",
+                guestImage: "https://media.api-sports.io/football/teams/66.png",
+                guestName: "Aston Villa",
+                homeImage: "https://media.api-sports.io/football/teams/44.png",
+                homeName: "Burnley",
+                referee: "D. Coote",
+                stadium: "Turf Moor",
+            },
+            {
+                city: "Brentford, Middlesex",
+                date: "2022-05-07",
+                hour: "14:00",
+                guestImage: "https://media.api-sports.io/football/teams/41.png",
+                guestName: "Southampton",
+                homeImage: "https://media.api-sports.io/football/teams/55.png",
+                homeName: "Brentford",
+                referee: "M. Salisbury",
+                stadium: "Brentford Community Stadium",
+            },
+            {
+                city: "Brentford, Middlesex",
+                date: "2022-05-07",
+                hour: "14:00",
+                guestImage: "https://media.api-sports.io/football/teams/41.png",
+                guestName: "Southampton",
+                homeImage: "https://media.api-sports.io/football/teams/55.png",
+                homeName: "Brentford",
+                referee: "M. Salisbury",
+                stadium: "Brentford Community Stadium",
+            },
+        ]*/
         //finishedGames = await GetFinishedGames(2);
     })
 </script>

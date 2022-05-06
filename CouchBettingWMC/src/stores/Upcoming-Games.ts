@@ -4,6 +4,7 @@ export interface UpcomingGame {
     homeName: string,
     guestName: string,
     date: string,
+    hour: string,
     stadium: string;
     referee: string;
     city:string;
@@ -46,6 +47,7 @@ export async function GetUpcomingGames(length:number) : Promise<any> {
             homeName: "",
             guestName: "",
             date: "",
+            hour: "",
             stadium: "",
             referee: "",
             city: "",
@@ -62,7 +64,15 @@ export async function GetUpcomingGames(length:number) : Promise<any> {
                     upcomingGames[x].guestImage = item.teams.away.logo;
                     upcomingGames[x].homeName = item.teams.home.name;
                     upcomingGames[x].guestName = item.teams.away.name;
-                    upcomingGames[x].date = item.fixture.date;
+                    const dateStamps = item.fixture.date.split("T");
+                    upcomingGames[x].date = dateStamps[0];
+                    const timeStamps = dateStamps[1].split(":");
+                    timeStamps[0] = (parseInt(timeStamps[0]) + 2).toString()
+                    if(parseInt(timeStamps[0]) > 23)
+                    {
+                        timeStamps[0] = "0" + (24 - parseInt(timeStamps[0])).toString();
+                    }
+                    upcomingGames[x].hour = timeStamps[0] +":"+ timeStamps[1];
                     upcomingGames[x].stadium = item.fixture.venue.name;
                     upcomingGames[x].referee = item.fixture.referee;
                     upcomingGames[x].city = item.fixture.venue.city;
