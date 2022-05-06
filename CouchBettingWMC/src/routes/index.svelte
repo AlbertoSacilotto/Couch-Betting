@@ -6,8 +6,8 @@
     import {GetUpcomingGames} from "../stores/Upcoming-Games";
     import {GetLiveGames} from "../stores/Live-Games";
     import { onMount } from "svelte";
-    let liveGames;
-    let upcomingGames;
+    let liveGames = undefined;
+    let upcomingGames = undefined;
     onMount(async function () {
         liveGames = await GetLiveGames();
         upcomingGames = await GetUpcomingGames();
@@ -56,18 +56,20 @@
     </div>
     <div id="LiveGamesCol" class="m-1 pt-4 text-center rounded-bottom">
         <ul>
-            {#if (upcomingGames != undefined || upcomingGames != null) && (liveGames == undefined || liveGames == null)}
+            {#if upcomingGames != undefined && liveGames == undefined}
                 <h2>Upcoming Games</h2>
                 {#each upcomingGames as game}
                     <UpcomingCard upcomingGame={game}/>
                 {/each}
-            {:else if (upcomingGames == undefined || upcomingGames == null) && (liveGames == undefined || liveGames == null)}
+            {:else if upcomingGames == undefined  && liveGames == undefined}
                 <p>Games are still loading</p>
-            {:else}
-                <h2>Live Games</h2>
-                {#each liveGames as game}
-                    <LiveCard liveGame={game}/>
-                {/each}
+            {:else if upcomingGames != undefined  && liveGames != undefined}
+                {#if liveGames[0].name != "" && liveGames[0].name != undefined}
+                    <h2>Live Games</h2>
+                    {#each liveGames as game}
+                        <LiveCard liveGame={game}/>
+                    {/each}
+                {/if}
                 <h2>Upcoming Games</h2>
                 {#each upcomingGames as game}
                     <UpcomingCard upcomingGame={game}/>
@@ -81,7 +83,7 @@
 <style>
     #HomeGrid {
     display: grid;
-    grid-template-columns: 85% 15%;
+    grid-template-columns: 77.5% 22.5%;
     grid-template-rows: 50% auto;
     grid-template-areas: "a b"
     "a b";
@@ -93,6 +95,7 @@
     background-color:#4717F6;
     grid-area:b;
     font-size: 110%;
+      padding-left: -5em;
   }
 
   #HomeCol
