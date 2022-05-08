@@ -7,7 +7,7 @@
         <h3><img src="{liveGame.homeImage}" class="card-img-top TeamPics" alt="{liveGame.homeName} Image"> - <img src="{liveGame.guestImage}" class="card-img-top TeamPics" alt="{liveGame.guestName} Image"></h3>
         <h5 class="card-title">{liveGame.homeName}-{liveGame.guestName}</h5>
         <h6 class="card-title">{liveGame.homeGoals}-{liveGame.guestGoals}</h6>
-        <h6 class="card-text">{liveGame.time}</h6>
+        <h6 class="card-text">{liveGame.minute}'</h6>
         <a href="/betting" class="btn btn-primary">Go somewhere</a>
     </div>
 </div>

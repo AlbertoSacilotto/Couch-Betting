@@ -11,45 +11,11 @@
     let upcomingGames = undefined;
     let finishedGames = undefined;
     onMount(async function () {
-        //liveGames = await GetLiveGames(2);
+        liveGames = await GetLiveGames();
         upcomingGames = await GetUpcomingGames(4);
-        /*upcomingGames = [
-            {
-                city: "Burnley",
-                date: "2022-05-07",
-                hour: "14:00",
-                guestImage: "https://media.api-sports.io/football/teams/66.png",
-                guestName: "Aston Villa",
-                homeImage: "https://media.api-sports.io/football/teams/44.png",
-                homeName: "Burnley",
-                referee: "D. Coote",
-                stadium: "Turf Moor",
-            },
-            {
-                city: "Brentford, Middlesex",
-                date: "2022-05-07",
-                hour: "14:00",
-                guestImage: "https://media.api-sports.io/football/teams/41.png",
-                guestName: "Southampton",
-                homeImage: "https://media.api-sports.io/football/teams/55.png",
-                homeName: "Brentford",
-                referee: "M. Salisbury",
-                stadium: "Brentford Community Stadium",
-            },
-            {
-                city: "Brentford, Middlesex",
-                date: "2022-05-07",
-                hour: "14:00",
-                guestImage: "https://media.api-sports.io/football/teams/41.png",
-                guestName: "Southampton",
-                homeImage: "https://media.api-sports.io/football/teams/55.png",
-                homeName: "Brentford",
-                referee: "M. Salisbury",
-                stadium: "Brentford Community Stadium",
-            },
-        ]*/
-        //finishedGames = await GetFinishedGames(2);
+        console.log(liveGames);
     })
+
 </script>
 <svelte:head>
     <title>Couch Betting - Home</title>
@@ -102,12 +68,13 @@
             {:else if upcomingGames == undefined  && liveGames == undefined}
                 <p>Games are still loading</p>
             {:else if upcomingGames != undefined  && liveGames != undefined}
-                {#if liveGames[0].name != "" && liveGames[0].name != undefined}
+
                     <h2>Live Games</h2>
                     {#each liveGames as game}
+                        {#if game.homeName != ""}
                         <LiveCard liveGame={game}/>
+                        {/if}
                     {/each}
-                {/if}
                 <h2>Upcoming Games</h2>
                 {#each upcomingGames as game}
                     <UpcomingCard upcomingGame={game}/>
