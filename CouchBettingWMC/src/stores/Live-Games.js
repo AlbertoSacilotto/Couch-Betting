@@ -1,4 +1,4 @@
-export async function GetLiveGames(length) {
+export async function GetLiveGames() {
     const options = {
         method: 'GET',
         /*headers: {
@@ -27,7 +27,7 @@ export async function GetLiveGames(length) {
         }
     };
     const liveGames = [];
-    for (let y = 0; y < length; y++) {
+    for (let y = 0; y < 6; y++) {
         liveGames[y] = {
             homeImage: "",
             guestImage: "",
@@ -41,7 +41,7 @@ export async function GetLiveGames(length) {
             referee: "",
         };
     }
-    fetch(`https://api-football-beta.p.rapidapi.com/fixtures?season=2021&live=39-808&league=39&next=${length}`, options)
+    fetch(`https://api-football-beta.p.rapidapi.com/fixtures?season=2021&live=808-39&league=39`, options)
         .then(response => response.json())
         .then(data => {
         if (data.response != undefined) {
@@ -51,7 +51,7 @@ export async function GetLiveGames(length) {
                 liveGames[x].homeImage = item.teams.home.logo;
                 liveGames[x].guestImage = item.teams.away.logo;
                 liveGames[x].homeName = item.teams.home.name;
-                liveGames[x].guestName = item.teams.home.name;
+                liveGames[x].guestName = item.teams.away.name;
                 liveGames[x].homeGoals = item.goals.home;
                 liveGames[x].guestGoals = item.goals.away;
                 liveGames[x].minute = item.fixture.status.elapsed;

@@ -11,7 +11,7 @@ export interface LiveGame {
     referee: string,
 }
 
-export async function GetLiveGames(length:number) : Promise<any> {
+export async function GetLiveGames() : Promise<any> {
     const options = {
         method: 'GET',
         /*headers: {
@@ -40,7 +40,7 @@ export async function GetLiveGames(length:number) : Promise<any> {
         }
     };
     const liveGames: LiveGame[] = [];
-    for(let y = 0; y < length;y++)
+    for(let y = 0; y < 6;y++)
     {
         liveGames[y] = {
             homeImage:"",
@@ -56,17 +56,18 @@ export async function GetLiveGames(length:number) : Promise<any> {
         };
     }
 
-    fetch(`https://api-football-beta.p.rapidapi.com/fixtures?season=2021&live=39-808&league=39&next=${length}`, options)
+    fetch(`https://api-football-beta.p.rapidapi.com/fixtures?season=2021&live=808-39&league=39`, options)
         .then(response => response.json())
         .then(data =>{
             if(data.response != undefined) {
                 let x = 0;
                 const list = data.response;
+
                 list.map(item => {
                     liveGames[x].homeImage = item.teams.home.logo;
                     liveGames[x].guestImage = item.teams.away.logo;
                     liveGames[x].homeName = item.teams.home.name;
-                    liveGames[x].guestName = item.teams.home.name;
+                    liveGames[x].guestName = item.teams.away.name;
                     liveGames[x].homeGoals = item.goals.home;
                     liveGames[x].guestGoals = item.goals.away;
                     liveGames[x].minute = item.fixture.status.elapsed;
@@ -78,6 +79,7 @@ export async function GetLiveGames(length:number) : Promise<any> {
             }
         })
         .catch(err => console.error(err));
+
     return liveGames;
 }
 
