@@ -1,6 +1,8 @@
 <script>
+    import NewsCard from "../components/newsCard.svelte";
     import {onMount} from "svelte";
     import {GetNews} from "../stores/news.js";
+    import newsCard from "../components/newsCard.svelte";
     let news;
     onMount(
         async function (){
@@ -8,7 +10,11 @@
             console.log(news);
         })
 </script>
-<h3>Hello</h3>
+
+
+<NewsCard/>
+
+
 {#if news != undefined}
     {#each news as n}
         <!--implement card output--->
