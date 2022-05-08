@@ -102,12 +102,13 @@
             {:else if upcomingGames == undefined  && liveGames == undefined}
                 <p>Games are still loading</p>
             {:else if upcomingGames != undefined  && liveGames != undefined}
-                {#if liveGames[0].name != "" && liveGames[0].name != undefined}
+
                     <h2>Live Games</h2>
                     {#each liveGames as game}
+                        {#if game.name != "" && game.name != undefined}
                         <LiveCard liveGame={game}/>
+                        {/if}
                     {/each}
-                {/if}
                 <h2>Upcoming Games</h2>
                 {#each upcomingGames as game}
                     <UpcomingCard upcomingGame={game}/>
