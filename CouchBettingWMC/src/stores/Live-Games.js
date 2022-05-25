@@ -13,18 +13,18 @@ export async function GetLiveGames() {
             'X-RapidAPI-Host': 'api-football-beta.p.rapidapi.com',
             'X-RapidAPI-Key': '5f2cc192d9msh69b07515e17d774p1dd35ejsn5828f7a01216'
         }*/
-        /*headers: {
+        headers: {
             'X-RapidAPI-Host': 'api-football-beta.p.rapidapi.com',
             'X-RapidAPI-Key': '155e473e49msh837bf9f83c94a03p118238jsn764de615730c'
-        }*/
+        }
         /*headers: {
             'X-RapidAPI-Host': 'api-football-beta.p.rapidapi.com',
             'X-RapidAPI-Key': '0c0b69a25dmsh31ec16ebeba5cdcp15b11ajsn55e3492c54c1'
         }*/
-        headers: {
+        /*headers: {
             'X-RapidAPI-Host': 'api-football-beta.p.rapidapi.com',
             'X-RapidAPI-Key': '2c7f13b9bbmshc9acb30687769acp196323jsned8f5c0b4f5a'
-        }
+        }*/
     };
     const liveGames = [];
     for (let y = 0; y < 6; y++) {

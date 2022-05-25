@@ -9,11 +9,10 @@
     let finishedGames;
     onMount(async function () {
             //liveGames = await GetLiveGames(4);
-            upcomingGames = await GetUpcomingGames(16);
-            //finishedGames = await GetFinishedGames(16);
+            //upcomingGames = await GetUpcomingGames(16);
+            finishedGames = await GetFinishedGames(16);
             console.log(liveGames);
-            console.log(upcomingGames);
-            console.log(finishedGames);
+            console.log(finishedGames[0]);
         }
     )
 </script>

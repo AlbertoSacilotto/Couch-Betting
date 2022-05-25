@@ -5,15 +5,14 @@
 
     import {GetUpcomingGames} from "../stores/Upcoming-Games";
     import {GetLiveGames} from "../stores/Live-Games";
-    import {GetFinishedGames} from "../stores/Finished-Games";
+
     import { onMount } from "svelte";
     let liveGames = undefined;
     let upcomingGames = undefined;
-    let finishedGames = undefined;
     onMount(async function () {
         liveGames = await GetLiveGames();
-        upcomingGames = await GetUpcomingGames(4);
-        console.log(liveGames);
+        upcomingGames = await GetUpcomingGames();
+        console.log(upcomingGames);
     })
 
 </script>
@@ -61,23 +60,32 @@
     <div id="LiveGamesCol" class="m-1 pt-4 text-center rounded-bottom">
         <ul>
             {#if upcomingGames != undefined && liveGames == undefined}
+                {#if upcomingGames[0].homeName != ""}
                 <h2>Upcoming Games</h2>
+                {/if}
                 {#each upcomingGames as game}
+                    {#if game.homeName != ""}
                     <UpcomingCard upcomingGame={game}/>
+                    {/if}
                 {/each}
             {:else if upcomingGames == undefined  && liveGames == undefined}
                 <p>Games are still loading</p>
             {:else if upcomingGames != undefined  && liveGames != undefined}
-
+                {#if liveGames[0].homeName != ""}
                     <h2>Live Games</h2>
+                {/if}
                     {#each liveGames as game}
                         {#if game.homeName != ""}
                         <LiveCard liveGame={game}/>
                         {/if}
                     {/each}
+                {#if upcomingGames[0].homeName != ""}
                 <h2>Upcoming Games</h2>
+                {/if}
                 {#each upcomingGames as game}
+                    {#if game.homeName != ""}
                     <UpcomingCard upcomingGame={game}/>
+                    {/if}
                 {/each}
             {/if}
         </ul>
