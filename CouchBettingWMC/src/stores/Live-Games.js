@@ -27,7 +27,7 @@ export async function GetLiveGames() {
         }
     };
     const liveGames = [];
-    for (let y = 0; y < 6; y++) {
+    for (let y = 0; y < 10; y++) {
         liveGames[y] = {
             homeImage: "",
             guestImage: "",

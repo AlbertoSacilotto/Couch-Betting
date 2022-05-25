@@ -40,7 +40,7 @@ export async function GetLiveGames() : Promise<any> {
         }
     };
     const liveGames: LiveGame[] = [];
-    for(let y = 0; y < 6;y++)
+    for(let y = 0; y < 10;y++)
     {
         liveGames[y] = {
             homeImage:"",
