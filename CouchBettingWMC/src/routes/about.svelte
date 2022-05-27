@@ -31,8 +31,7 @@
                 <li>score</li>
                 <li>the winner</li>
                 <li>a draw</li>
-                <li>score before the 2nd half</li>
-                <li>goal diffrence</li>
+                <li>the ammount of goals</li>
             </ul>
             <p>If you dont have enough money to bet you will only be able to bet "on score", which is harder.</p>
         </div>
@@ -53,44 +52,16 @@
                 <p>The News will be everything you need to know about to fully enjoy the premier league.</p>
             </div>
         </section>
-        <section id="ProfileSpace">
-            <div class="d-inline">
-                <h2>Alberto's profile</h2>
-                <p>...<a href="https://github.com/AlbertoSacilotto"><img class="ProfileIcons rounded-circle" src="https://avatars.githubusercontent.com/u/48130185?v=4" alt=""></a></p>
-                <p>...<a href="https://github.com/AlbertoSacilotto"><img class="ProfileIcons rounded-circle" src="" alt=""></a></p>
-            </div>
-            <div class="d-inline">
-                <h2>Arsim's profile</h2>
-                <p>...<a href="google.com"><img class="ProfileIcons rounded-circle" src="" alt=""></a></p>
-                <p>...<a href="google.com"><img class="ProfileIcons rounded-circle" src="" alt=""></a></p>
-            </div>
-            <div class="d-inline">
-                <h2>Yanis' profile</h2>
-                <h4>Github:<a href="https://github.com/YanisFerecean"><img class="ProfileIcons rounded-circle" src="https://avatars.githubusercontent.com/u/85968421?v=4" alt="Yanis pfp"></a></h4>
-                <h4>Steam:<a href="https://steamcommunity.com/profiles/76561199205687129/"><img class="ProfileIcons rounded-circle" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Steam_icon_logo.svg/2048px-Steam_icon_logo.svg.png" alt="steam logo"></a></h4>
-            </div>
-            <div class="d-inline">
-                <h2>Group profile</h2>
-                <h4>Discord: <a href="https://discord.gg/aX3ErSJR6M"><img class="ProfileIcons rounded-circle" src="https://png.pngitem.com/pimgs/s/369-3695753_discord-logo-png-transparent-png.png" alt="discord logo"></a></h4>
-            </div>
-        </section>
     </article>
 <style>
     #AboutUs
     {
         color: #E7DFDD;
+        font-size: 1.2em;
     }
     .AboutPics
     {
         width: 20%;
         height: 11.25%;
-    }
-    #ProfileSpace
-    {
-        background-color: #4717F6;
-    }
-    .ProfileIcons{
-        width: 2%;
-        height: 2%;
     }
 </style>

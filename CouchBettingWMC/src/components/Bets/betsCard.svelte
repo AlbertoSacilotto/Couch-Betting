@@ -1,9 +1,12 @@
 <script>
+    import {GetOddsForGame} from "../../stores/Betting.ts";
+
     export let upcomingGame;
+    let amount = 0;
 </script>
 
 <div class="d-flex justify-content-center">
-    <div class="card" style="width: 24rem;">
+    <div class="card" style="width: 18rem;">
         <div class="card-body">
             <h3><img src="{upcomingGame.homeImage}" class="card-img-top TeamPics m-1" alt="{upcomingGame.homeName} Image"> - <img src="{upcomingGame.guestImage}" class="card-img-top TeamPics m-1" alt="{upcomingGame.guestName} Image"></h3>
             <div class="d-flex justify-content-around">
@@ -20,7 +23,11 @@
 
             <h6 class="card-text m-1">{upcomingGame.date}</h6>
             <h6 class="card-text m-1">{upcomingGame.hour}</h6>
-            <a href="/betting" class="btn btn-primary">Place Bet</a>
+            <form>
+                <input placeholder="Amount" bind:value={amount}>
+                <button onclick="{amount = GetOddsForGame(upcomingGame.homeName, upcomingGame.guestName)}"></button>
+                <p>Won: {amount}</p>
+            </form>
         </div>
     </div>
 </div>

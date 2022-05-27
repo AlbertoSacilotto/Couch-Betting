@@ -1,20 +1,9 @@
 <script lang="ts">
 
-    import UpcomingCard from "../components/upcomingCard.svelte"
-    import LiveCard from "../components/liveCard.svelte"
-
-    import {GetUpcomingGames} from "../stores/Upcoming-Games";
-    import {GetLiveGames} from "../stores/Live-Games";
-    import {GetFinishedGames} from "../stores/Finished-Games";
-    import { onMount } from "svelte";
-    let liveGames = undefined;
-    let upcomingGames = undefined;
-    let finishedGames = undefined;
-    onMount(async function () {
-        liveGames = await GetLiveGames();
-        upcomingGames = await GetUpcomingGames(4);
-        console.log(liveGames);
-    })
+    import UpcomingCard from "../components/UpcomingGames/upcomingCard.svelte"
+    import LiveCard from "../components/LiveGames/liveCard.svelte"
+    import {liveGames} from "../stores/Live-Games";
+    import {upGames} from "../stores/Upcoming-Games";
 
 </script>
 <svelte:head>
@@ -52,32 +41,27 @@
               </div>
               
         </div>
-        <div class="p-4 text-center">
+        <div class="m-4 p-4 text-center">
             <h1>Welcome to Couch Betting</h1>
-            <h3>Arsim schreib atwas über unsere Website und gestallte ein Impressum Und fixxe die Navbar und suche neue bilder mit der selben größe vllt</h3>
+            <h4><em>Bet wherever and whenever</em></h4>
         </div>
-        
     </div>
     <div id="LiveGamesCol" class="m-1 pt-4 text-center rounded-bottom">
         <ul>
-            {#if upcomingGames != undefined && liveGames == undefined}
-                <h2>Upcoming Games</h2>
-                {#each upcomingGames as game}
-                    <UpcomingCard upcomingGame={game}/>
-                {/each}
-            {:else if upcomingGames == undefined  && liveGames == undefined}
-                <p>Games are still loading</p>
-            {:else if upcomingGames != undefined  && liveGames != undefined}
-
-                    <h2>Live Games</h2>
-                    {#each liveGames as game}
-                        {#if game.homeName != ""}
+            {#if liveGames != undefined}
+                <h2>Live Games</h2>
+                {#each liveGames as game}
+                    {#if game.homeName != ""}
                         <LiveCard liveGame={game}/>
-                        {/if}
-                    {/each}
+                    {/if}
+                {/each}
+
+            {:else if upGames != undefined }
                 <h2>Upcoming Games</h2>
-                {#each upcomingGames as game}
-                    <UpcomingCard upcomingGame={game}/>
+                {#each upGames as game}
+                    {#if game.homeName != ""}
+                        <UpcomingCard upcomingGame={game}/>
+                    {/if}
                 {/each}
             {/if}
         </ul>
@@ -89,9 +73,8 @@
     #HomeGrid {
     display: grid;
     grid-template-columns: 77.5% 22.5%;
-    grid-template-rows: 50% auto;
-    grid-template-areas: "a b"
-    "a b";
+    grid-template-rows: 50% 6.5%;
+    grid-template-areas:"a b""a b";
     }
 
   #LiveGamesCol
@@ -100,7 +83,9 @@
     background-color:#4717F6;
     grid-area:b;
     font-size: 110%;
-      padding-left: -5em;
+    padding-left: -5em;
+    overflow:scroll;
+    overflow-x: hidden;
   }
 
   #HomeCol
@@ -113,7 +98,7 @@
   }
   #HomeCarousell
   {
-    background-color: #f73f4e;
+    background-color: #0E0B16;
   }
 
   .HomeCyclePics

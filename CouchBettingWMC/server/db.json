@@ -1,12 +1,6 @@
 {
     "accounts": [
-        { "id": 1, "username": "YanisMeow", "password": "yanis","betsID": [1,3] },
-        { "id": 2, "username": "Alberto", "password": "alb", "betsID": [2,3,4] }
-    ],
-    "bets": [
-        { "id": 1, "home": "Liverpool", "guest": "Chelsea", "goalsHome": 2, "goalsGuest": 1 , "time": 65},
-        { "id": 2, "home": "Everton", "guest": "Man Utd.", "goalsHome": 0, "goalsGuest": 0 ,"time": 45},
-        { "id": 3, "home": "Crystal Palace", "guest": "Man City", "goalsHome": 0, "goalsGuest": 2 ,"time": 38},
-        { "id": 4, "home": "Totenham", "guest": "Arsenal", "goalsHome": 1, "goalsGuest": 1 ,"time": 25}
+        { "id": 1, "username": "YanisMeow", "password": "yanis","coins": 9900,"betsID": [] },
+        { "id": 2, "username": "Alberto", "password": "alb","coins": 7200, "bets": [] }
     ]
   }

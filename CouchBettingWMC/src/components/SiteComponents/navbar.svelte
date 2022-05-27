@@ -16,7 +16,7 @@
           <a class="nav-link navText text-white rounded" id="login" href="/login">Log In</a>
         </div>
         <div>
-          <a class="nav-link rounded" id="signup" href="/signup">Sign Up</a>
+          <a class="nav-link navText rounded" id="signup" href="/signup">Sign Up</a>
         </div>
     </div>
     </div>
@@ -29,7 +29,7 @@
       }
       .navText
       {
-        font-size: 140%;
+        font-size: 1.6em;
         text-decoration: none;
         margin-left: 2rem;
         color:#E7DFDD;
@@ -42,11 +42,8 @@
       {
         border: solid #A239CA 0.1em;
         color: #A239CA;
-        font-size: 1.4em;
-        padding-bottom: 0.25em;
-        padding-left: 0.5em;
-        padding-right: 0.5em;
-        padding-top: 0.25em;
+        font-size: 1.6em;
+        padding: 0.20em 0.5em;
         margin-left: 2em;
       }
   </style>
