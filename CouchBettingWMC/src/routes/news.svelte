@@ -2,7 +2,7 @@
     import NewsCard from "../components/News/newsCard.svelte";
     import {onMount} from "svelte";
     import {GetNews} from "../stores/News.ts";
-    let news = undefined;
+    let news;
     onMount(
         async function (){
             news = await GetNews();

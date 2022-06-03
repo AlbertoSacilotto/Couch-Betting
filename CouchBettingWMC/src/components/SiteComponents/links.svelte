@@ -31,7 +31,7 @@
                 <div class="widget no-box">
                     <h5 class="widget-title">Join our Community<span></span></h5>
                     <p>Be informed with the newest changes and join the friendliest Sports Community.</p>
-                    <a class="btn btn-dark" href="https://discord.gg/aX3ErSJR6M"><img width="28" src="../../../static/discord.svg">  Join our Discord Server now</a>
+                    <a class="btn btn-dark" href="https://discord.gg/aX3ErSJR6M"><img width="28" alt="discord" src="../../../static/discord.svg">  Join our Discord Server now</a>
                 </div>
             </div>
 
