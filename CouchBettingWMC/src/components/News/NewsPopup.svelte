@@ -1,7 +1,6 @@
 <script>
     export let news;
     const url = `/news`;
-    console.log(news.content);
 </script>
 
 <div id="News" class="col-lg-4 col-sm-6 m-4">
@@ -12,7 +11,7 @@
             <h4>{news.title}</h4>
             <h5>{news.description}</h5>
             <p>{news.date}</p>
-            {#if news.url != null}
+            {#if news.source != null&&news.source != "" && news.source!= undefined}
                 <a href="{news.url}"  type="button" >Source: {news.sourceName}</a>
             {:else}
                 <p>Written by {news.author}</p>
@@ -25,15 +24,13 @@
 <style>
     #NewsImage
     {
-        border: #A239CA solid 0.1em ;
+        width: 50em;
+        border: #A239CA solid 0.2em ;
         border-radius: 0.4em;
     }
-    #NewsImage:hover{
-        border: #A239CA solid 0.18em ;
-        width: 29.94em;
-        height: auto;
-    }
+
     #News{
         float: right;
+        width: 31em;
     }
 </style>

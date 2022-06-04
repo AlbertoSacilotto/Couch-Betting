@@ -24,7 +24,7 @@
 
         //const url = "https://newsapi.org/v2/top-headlines?country=gb&category=sports&apiKey=e8517c35369347f8861fbe8a136f438b";
         //const url = "https://newsapi.org/v2/top-headlines?country=gb&category=sports&apiKey=96795eb66ddc4b19a456b67bf13c7573";
-        const url = "https://newsapi.org/v2/top-headlines?country=gb&category=sports&apiKey=0ca8d234a30b43d1a6157a7be9d9cb06";
+        const url = "https://newsapi.org/v2/top-headlines?country=gb&language=en&country=gb&category=sports&apiKey=0ca8d234a30b43d1a6157a7be9d9cb06";
         return fetch(url, options)
             .then(response => response.json())
             .then(data => {

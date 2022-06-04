@@ -8,12 +8,15 @@
     <div class="portfolio-item float-right">
         <img class="img-fluid mb-3" id="NewsImage" src="{news.image}" alt="news"/>
         <div class="portfolio-caption">
-            <a href="{url}"><h6>{news.title}</h6></a>
+            <a href="{url}"><h5>{news.title}</h5></a>
         </div>
 
     </div>
 </div>
 <style>
+    a{
+        color:#A239CA;
+    }
     #NewsImage
     {
         width: 70em;
