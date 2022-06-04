@@ -1,6 +1,18 @@
 {
-    "accounts": [
-        { "id": 1, "username": "YanisMeow", "password": "yanis","coins": 9900,"betsID": [] },
-        { "id": 2, "username": "Alberto", "password": "alb","coins": 7200, "bets": [] }
-    ]
-  }
+  "accounts": [
+    {
+      "id": 1,
+      "username": "YanisMeow",
+      "password": "yanis",
+      "coins": 9900,
+      "betsID": []
+    },
+    {
+      "id": 2,
+      "username": "Alberto",
+      "password": "alb",
+      "coins": 7200,
+      "bets": []
+    }
+  ],
+}

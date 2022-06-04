@@ -1,6 +1,5 @@
 <script>
     export let news;
-    console.log(news);
     const url = `/NewsInfo/?id=${news.id}`;
 </script>
 

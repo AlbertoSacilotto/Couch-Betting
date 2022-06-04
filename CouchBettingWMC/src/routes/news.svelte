@@ -1,20 +1,20 @@
 <script>
     import NewsCard from "../components/News/newsCard.svelte";
     import {onMount} from "svelte";
-    import {GetNews} from "../stores/News.ts";
+    import {GetNewsFromApi} from "../stores/News.ts";
     let news;
-    onMount(
-        async function (){
-            news = await GetNews();
-        })
-    console.log(news)
+    onMount(async () => {
+        news = await  GetNewsFromApi()
+    })
 </script>
 <div class="container d-flex" id="Place">
-    {#if news != undefined}
-        {#each news as n}
-            <NewsCard news = {n}/>
+    {#await }
+       <h1>loading news</h1>
+    {:then GetNewsFromApi}
+        {#each GetNewsFromApi() as n}
+            <h1>{n.title}</h1>
         {/each}
-    {/if}
+    {/await}
 </div>
 <style>
     #Place{
