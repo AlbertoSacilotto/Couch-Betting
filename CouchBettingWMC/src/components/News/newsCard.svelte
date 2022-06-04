@@ -8,10 +8,7 @@
     <div class="portfolio-item float-right">
         <img class="img-fluid mb-3" id="NewsImage" src="{news.image}" alt="news"/>
         <div class="portfolio-caption">
-            <h4>{news.title}</h4>dd
-            <h1>{news.id}ddd</h1>
-            <p>{news.description}</p>
-            <a href="{url}" type="button"><img width="30" src="static/info-circle.svg" alt="Know More"  class="float-end"></a>
+            <a href="{url}"><h6>{news.title}</h6></a>
         </div>
 
     </div>
@@ -19,7 +16,7 @@
 <style>
     #NewsImage
     {
-        width: 30em;
+        width: 70em;
         height: auto;
         border: #A239CA solid 0.1em ;
         border-radius: 0.4em;
