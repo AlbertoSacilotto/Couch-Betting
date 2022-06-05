@@ -24,12 +24,8 @@
         border: #A239CA solid 0.1em ;
         border-radius: 0.4em;
     }
-    #NewsImage:hover{
-        border: #A239CA solid 0.18em ;
-        width: 29.94em;
-        height: auto;
-    }
     #News{
         float: right;
+        width: 22em;
     }
 </style>

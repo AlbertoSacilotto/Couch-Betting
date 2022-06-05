@@ -2,7 +2,7 @@ import type {Bet} from "./Betting";
 
 export interface User {
     id: number,
-    name:string,
+    username:string,
     password:string,
     coins: number,
     bets: Bet[],
@@ -11,13 +11,14 @@ const unallowedSigns= ['*', '/', '"', '-', '+', '#', '[', ']', '{', '}', '=', ';
 
 export class AccountManager
 {
-    public async LogIn(name:string, password:string): Promise<boolean>
+    public async LogIn(name2:string, password:string): Promise<boolean>
     {
         const users:User[] = <User[]> await $.get("http://localhost:4000/accounts");
         users.map(existing_user=>{
-                if(existing_user.name === name && existing_user.name === name)
+                if(existing_user.username == name2)
                 {
-                    loggedAccount = existing_user;
+                    global.loggedAccount = existing_user;
+                    console.log(loggedAccount)
                     return true;
                 }
             }
@@ -36,7 +37,7 @@ export class AccountManager
     private AddUser(name:string, password:string)
     {
         const user={
-            name: name,
+            username: name,
             password: password,
             coins: 10000,
             bets: [],
@@ -74,6 +75,6 @@ export class AccountManager
         return true;
     }
 }
-declare global{
-    let loggedAccount:User;
-}
+export let loggedAccount;
+
+

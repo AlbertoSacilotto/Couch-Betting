@@ -1,10 +1,11 @@
 const unallowedSigns = ['*', '/', '"', '-', '+', '#', '[', ']', '{', '}', '=', ';', ':', '@', '|', '<', '>', '?', '!', ',',];
 export class AccountManager {
-    async LogIn(name, password) {
+    async LogIn(name2, password) {
         const users = await $.get("http://localhost:4000/accounts");
         users.map(existing_user => {
-            if (existing_user.name === name && existing_user.name === name) {
-                loggedAccount = existing_user;
+            if (existing_user.username == name2) {
+                global.loggedAccount = existing_user;
+                console.log(loggedAccount);
                 return true;
             }
         });
@@ -19,7 +20,7 @@ export class AccountManager {
     }
     AddUser(name, password) {
         const user = {
-            name: name,
+            username: name,
             password: password,
             coins: 10000,
             bets: [],
@@ -49,4 +50,5 @@ export class AccountManager {
         return true;
     }
 }
+export let loggedAccount;
 //# sourceMappingURL=Accounts.js.map

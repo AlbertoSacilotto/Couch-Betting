@@ -13,6 +13,13 @@
       "password": "alb",
       "coins": 7200,
       "bets": []
+    },
+    {
+      "id": 3,
+      "username": "a",
+      "password": "a",
+      "coins": 7200,
+      "bets": []
     }
-  ],
+  ]
 }

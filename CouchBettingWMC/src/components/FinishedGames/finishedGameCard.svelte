@@ -75,10 +75,10 @@
 
 <style>
     h6,h3{
-        color:black;
+        color: #ffffff;
     }
     div{
-        color: black;
+        color: #ffffff;
         font-size: small;
     }
     .TeamPics{
@@ -88,5 +88,8 @@
     #non-sel{
         -webkit-touch-callout : none;
         -webkit-user-select:none;
+    }
+    #cardDesign{
+        background-color: #2a2a2a;
     }
 </style>

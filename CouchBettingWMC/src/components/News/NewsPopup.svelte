@@ -1,6 +1,7 @@
 <script>
     export let news;
     const url = `/news`;
+
 </script>
 
 <div id="News" class="col-lg-4 col-sm-6 m-4">
@@ -9,14 +10,13 @@
         <img class="img-fluid mb-3" id="NewsImage" src="{news.image}" alt="{news.image}"/>
         <div class="portfolio-caption">
             <h4>{news.title}</h4>
-            <h5>{news.description}</h5>
-            <p>{news.date}</p>
-            {#if news.source != null&&news.source != "" && news.source!= undefined}
-                <a href="{news.url}"  type="button" >Source: {news.sourceName}</a>
-            {:else}
+            <div id="content">
+            </div>
+
+            {#if news.author != null&&news.author != "" && news.author!= undefined}
                 <p>Written by {news.author}</p>
             {/if}
-
+            <p>publish date: {news.date}</p>
             <a href="{url}" type="button">Go Back</a>
         </div>
     </div>

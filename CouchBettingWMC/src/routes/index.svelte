@@ -10,7 +10,6 @@
     <title>Couch Betting - Home</title>
 </svelte:head>
 <article id="HomeGrid">
-    
     <div id="HomeCol">
         <div id="HomeCarousell">
             <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
@@ -47,6 +46,7 @@
         </div>
     </div>
     <div id="LiveGamesCol" class="m-1 pt-4 text-center rounded-bottom">
+        <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@a_stn14/video/7105764690516790534" data-video-id="7105764690516790534" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@a_stn14" href="https://www.tiktok.com/@a_stn14">@a_stn14</a> <a title="fyp" target="_blank" href="https://www.tiktok.com/tag/fyp">#fyp</a> <a title="fy" target="_blank" href="https://www.tiktok.com/tag/fy">#fy</a> <a target="_blank" title="♬ Originalton - user3670447092777" href="https://www.tiktok.com/music/Originalton-7105764687216855814">♬ Originalton - user3670447092777</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
         <ul>
             {#if liveGames != undefined}
                 <h2>Live Games</h2>

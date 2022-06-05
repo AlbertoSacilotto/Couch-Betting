@@ -1,3 +1,8 @@
+<script lang="ts">
+    import {loggedAccount} from "../../stores/Accounts";
+    console.log(loggedAccount)
+</script>
+{#if loggedAccount == null && loggedAccount == undefined}
 <nav class="navbar navbar-expand-lg navbar-light border-bottom border-secondary w-100" id="navBar" >
     <div class="container-fluid">
       <div class="collapse navbar-collapse">
@@ -21,6 +26,7 @@
     </div>
     </div>
   </nav>
+{/if}
   
   <style>
       #navBar

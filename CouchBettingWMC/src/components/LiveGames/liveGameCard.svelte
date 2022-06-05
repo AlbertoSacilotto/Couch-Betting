@@ -110,5 +110,7 @@
     #Time{
         color: #5d9b48;
     }
-
+    #cardDesign{
+        background-color: #ffffff;
+    }
 </style>
