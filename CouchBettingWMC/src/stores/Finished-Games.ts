@@ -13,6 +13,7 @@ export interface FinishedGames {
     stadium: string;
     referee: string;
     city:string;
+    id: number,
 }
 
 export const finishedGames:FinishedGames[] = [
@@ -28,7 +29,8 @@ export const finishedGames:FinishedGames[] = [
         city:teams[12].teamCity,
         homeGoals: 2,
         guestGoals:1,
-        date: "28/5/2022"
+        date: "28/5/2022",
+        id: 9,
     },
     {
         homeImage: teams[13].teamLogo,
@@ -42,7 +44,8 @@ export const finishedGames:FinishedGames[] = [
         city:teams[13].teamCity,
         homeGoals: 0,
         guestGoals:1,
-        date:"28/5/2022"
+        date:"28/5/2022",
+        id: 8,
     },
     {
         homeImage: teams[15].teamLogo,
@@ -56,7 +59,8 @@ export const finishedGames:FinishedGames[] = [
         city:teams[15].teamCity,
         homeGoals: 3,
         guestGoals:1,
-        date:"28/5/2022"
+        date:"28/5/2022",
+        id: 7,
     },
     {
         homeImage: teams[5].teamLogo,
@@ -70,7 +74,8 @@ export const finishedGames:FinishedGames[] = [
         city:teams[5].teamCity,
         homeGoals: 1,
         guestGoals:0,
-        date:"24/5/2022"
+        date:"24/5/2022",
+        id: 6,
     },
     {
         homeImage: teams[7].teamLogo,
@@ -84,7 +89,8 @@ export const finishedGames:FinishedGames[] = [
         city:teams[2].teamCity,
         homeGoals: 2,
         guestGoals:1,
-        date:"24/5/2022"
+        date:"24/5/2022",
+        id: 5,
     },
     {
         homeImage: teams[16].teamLogo,
@@ -98,7 +104,8 @@ export const finishedGames:FinishedGames[] = [
         city:teams[16].teamCity,
         homeGoals: 0,
         guestGoals:1,
-        date:"24/5/2022"
+        date:"24/5/2022",
+        id: 4,
     },
     {
         homeImage: teams[18].teamLogo,
@@ -112,7 +119,8 @@ export const finishedGames:FinishedGames[] = [
         city:teams[18].teamCity,
         homeGoals: 3,
         guestGoals:1,
-        date:"20/5/2022"
+        date:"20/5/2022",
+        id: 3,
     },
     {
         homeImage: teams[1].teamLogo,
@@ -126,7 +134,8 @@ export const finishedGames:FinishedGames[] = [
         city:teams[1].teamCity,
         homeGoals: 1,
         guestGoals:0,
-        date:"20/5/2022"
+        date:"20/5/2022",
+        id: 2,
     },
     {
         homeImage: teams[2].teamLogo,
@@ -140,7 +149,8 @@ export const finishedGames:FinishedGames[] = [
         city:teams[2].teamCity,
         homeGoals: 2,
         guestGoals:1,
-        date:"20/5/2022"
+        date:"20/5/2022",
+        id: 1,
     },
     {
         homeImage: teams[8].teamLogo,
@@ -154,6 +164,7 @@ export const finishedGames:FinishedGames[] = [
         city:teams[8].teamCity,
         homeGoals: 3,
         guestGoals:1,
-        date:"16/5/2022"
+        date:"16/5/2022",
+        id: 0,
     },
 ]

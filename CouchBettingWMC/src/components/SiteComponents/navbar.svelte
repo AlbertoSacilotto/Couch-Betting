@@ -1,8 +1,8 @@
 <script lang="ts">
-    import {loggedAccount} from "../../stores/Accounts";
+    import {loggedAccount} from "../../stores/Betting";
     console.log(loggedAccount)
 </script>
-{#if loggedAccount == null && loggedAccount == undefined}
+
 <nav class="navbar navbar-expand-lg navbar-light border-bottom border-secondary w-100" id="navBar" >
     <div class="container-fluid">
       <div class="collapse navbar-collapse">
@@ -16,6 +16,7 @@
           
         </div>
       </div>
+      {#if loggedAccount == undefined || loggedAccount == null}
       <div class="d-flex">
         <div>
           <a class="nav-link navText text-white rounded" id="login" href="/login">Log In</a>
@@ -23,10 +24,20 @@
         <div>
           <a class="nav-link navText rounded" id="signup" href="/signup">Sign Up</a>
         </div>
-    </div>
+      </div>
+        {:else}
+        <div class="d-flex">
+          <div>
+            <p class="nav-link navText text-white rounded">{loggedAccount.coins}</p>
+          </div>
+          <div>
+            <p class="nav-link navText rounded">{loggedAccount.name}</p>
+          </div>
+        </div>
+      {/if}
     </div>
   </nav>
-{/if}
+
   
   <style>
       #navBar
