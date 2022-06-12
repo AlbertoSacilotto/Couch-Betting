@@ -27,11 +27,12 @@
       </div>
         {:else}
         <div class="d-flex">
+
           <div>
-            <p class="nav-link navText text-white rounded">{loggedAccount.coins}</p>
+            <a class="nav-link navText text-white rounded disabled ">{loggedAccount.coins}  <img class="pb-2" src="../../../static/KiraCoinPNG.png" width="30"></a>
           </div>
-          <div>
-            <p class="nav-link navText rounded">{loggedAccount.name}</p>
+            <div>
+            <a class="nav-link navText rounded disabled">{loggedAccount.name} <img src="static/abstract-user-flat-4.svg" width="40"></a>
           </div>
         </div>
       {/if}

@@ -1,6 +1,5 @@
 <script>
     export let liveGame;
-    let icon ="../static/chevron-down.svg";
     let extended = false;
     let text ="Show More";
     function SeeMore()
@@ -8,12 +7,10 @@
         if(extended == false)
         {
             extended = true;
-            icon ="../static/chevron-up.svg";
             text ="Show Less";
         }
         else{
             extended = false;
-            icon ="../static/chevron-down.svg";
             text ="Show More";
         }
     }
@@ -21,7 +18,7 @@
 </script>
 
 <div class="p-1 m-3 float-start">
-    <div class="card" style="width: 18rem;height: 21rem">
+    <div class="card" style="width: 18rem;height: 20.8rem">
         <div class="card-body" id="cardDesign">
             <div class="d-flex justify-content-around mt-4">
                 <div>
@@ -37,21 +34,13 @@
 
             <div class="d-flex justify-content-around">
                 <div>
-                    {#if liveGame.homeName.length > 12}
-                        <h6 class="card-title m-1">{liveGame.homeShort}</h6>
-                    {:else}
-                        <h6 class="card-title m-1">{liveGame.homeName}</h6>
-                    {/if}
+                    <h6 class="card-title m-1">{liveGame.homeShort}</h6>
                 </div>
                 <div class="justify-content-center">
-                    <h6 class="card-title m-1">-</h6>
+                    <h6 class="card-title m-1"></h6>
                 </div>
                 <div>
-                    {#if liveGame.guestName.length > 12}
-                        <h6 class="card-title m-1">{liveGame.guestShort}</h6>
-                    {:else}
-                        <h6 class="card-title m-1">{liveGame.guestName}</h6>
-                    {/if}
+                    <h6 class="card-title m-1">{liveGame.guestShort}</h6>
                 </div>
             </div>
 
@@ -73,22 +62,20 @@
             </div>
             <div class="d-felx" id="non-sel">
                 <h6>
-                    <p type="button" class="mb-2" on:click={SeeMore}>{text}<img src="{icon}" alt="show more/less"></p>
+                    <p type="button" class="mb-2 btn btn-xs btn-success" on:click={SeeMore}>{text}</p>
                 </h6>
             </div>
             {#if extended == true}
-                <h6 class="card-text m-1"><strong>City:</strong> {liveGame.city}</h6>
-                <h6 class="card-text m-1"><strong>Stadium:</strong> {liveGame.stadium}</h6>
-                <h6 class="card-text m-1"><strong>Referee:</strong> {liveGame.referee}</h6>
-            {:else}
-                <h6><a href="/betting" class="btn btn-primary mt-3">Place Bet</a></h6>
+                <p class="card-text m-1"><u>City:</u> {liveGame.city}</p>
+                <p class="card-text m-1"><u>Stadium:</u> {liveGame.stadium}</p>
+                <p class="card-text m-0"><u>Referee:</u> {liveGame.referee}</p>
             {/if}
         </div>
     </div>
 </div>
 <style>
     h6,h3{
-        color: #000000;
+        color: #ffffff;
         font-weight: 500;
     }
     a{
@@ -111,6 +98,6 @@
         color: #5d9b48;
     }
     #cardDesign{
-        background-color: #ffffff;
+        background-color: #2a2a2a;
     }
 </style>

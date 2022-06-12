@@ -26,7 +26,6 @@
         </div>
         <h6 class="card-title">{liveGame.homeGoals}-{liveGame.guestGoals}</h6>
         <h6 class="card-text" id="Time"><strong>{liveGame.minute}'</strong></h6>
-        <a href="/betting" class="btn btn-primary">Go somewhere</a>
     </div>
 </div>
 </div>

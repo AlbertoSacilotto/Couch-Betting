@@ -22,5 +22,9 @@
         flex-direction: row;
         height: auto;
         overflow-y: hidden;
+        margin-bottom: 23.75em;
+        height: 34em;
+        border-left: solid white 0.2em;
+        border-right: solid white 0.2em;
     }
 </style>

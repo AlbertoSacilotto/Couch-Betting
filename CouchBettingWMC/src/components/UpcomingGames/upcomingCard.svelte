@@ -29,7 +29,6 @@
 
             <h6 class="card-text m-1">{upcomingGame.date}</h6>
             <h6 class="card-text m-1">{upcomingGame.hour}</h6>
-            <a href="/betting" class="btn btn-primary">Place Bet</a>
         </div>
     </div>
 </div>

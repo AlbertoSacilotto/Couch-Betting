@@ -11,7 +11,7 @@ export const finishedGames = [
         referee: "Ilijas Brkic",
         city: teams[12].teamCity,
         homeGoals: 2,
-        guestGoals: 1,
+        guestGoals: 2,
         date: "28/5/2022",
         id: 9,
     },

@@ -1,6 +1,14 @@
-<script>
+<script lang="ts">
+    import {onMount} from "svelte";
     export let news;
     const url = `/news`;
+    onMount(()=>{
+        for(let p of news.content)
+        {
+            if(p.data.content != undefined &&p.data.content != null )
+            document.getElementById('content').innerHTML += p.data.content;
+        }
+    })
 
 </script>
 
@@ -12,7 +20,6 @@
             <h4>{news.title}</h4>
             <div id="content">
             </div>
-
             {#if news.author != null&&news.author != "" && news.author!= undefined}
                 <p>Written by {news.author}</p>
             {/if}

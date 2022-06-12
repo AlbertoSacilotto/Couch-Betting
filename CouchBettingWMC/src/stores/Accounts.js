@@ -24,6 +24,8 @@ export class AccountManager {
             password: password,
             coins: 10000,
             bets: [],
+            wonBets: [],
+            lostBets: []
         };
         $.ajax({
             url: "http://localhost:4000/accounts",

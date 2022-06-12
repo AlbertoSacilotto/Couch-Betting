@@ -26,5 +26,6 @@
         width:75%;
         background-color: white;
         display: grid;
+        margin-bottom: 24em;
     }
 </style>
