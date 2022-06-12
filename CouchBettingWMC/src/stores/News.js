@@ -1,4 +1,4 @@
-export async function GetNews() {
+export async function GetNewsFromApi() {
     const options = {
         method: 'GET',
         headers: {
@@ -7,39 +7,33 @@ export async function GetNews() {
         }
     };
     const news = [];
-    for (let y = 0; y < 20; y++) {
-        news[y] = {
-            title: "",
-            author: "",
-            description: "",
-            content: "",
-            image: "",
-            date: "",
-        };
-    }
-    fetch('https://livescore6.p.rapidapi.com/news/v2/list-by-sport?category=2021020913320920836&page=1', options)
+    //const url = "https://newsapi.org/v2/top-headlines?country=gb&category=sports&apiKey=e8517c35369347f8861fbe8a136f438b";
+    //const url = "https://newsapi.org/v2/top-headlines?country=gb&category=sports&apiKey=96795eb66ddc4b19a456b67bf13c7573";
+    const url = "https://livescore6.p.rapidapi.com/news/v2/list-by-sport?category=2021020913320920836&page=1";
+    return await fetch(url, options)
         .then(response => response.json())
         .then(data => {
-        ;
         const list = data.data;
         let x = 0;
-        list.map(item => {
-            news[x].title = item.seo.title;
-            news[x].author = ""; //item.authors[0].name;
-            news[x].description = item.subtitle;
-            if (news[x].description == null) {
-                news[x].description = item.seo.description;
+        list.map(article => {
+            let a = "";
+            if (article.authors.length != 0) {
+                a = article.authors[0].name;
             }
-            news[x].image = item.image.data.urls.uploaded.original;
-            news[x].date = item.created_at;
-            item.body.map(text_part => {
-                news[x].content += text_part.data.content; //.slice(3,text_part.data.content.length-4);
-            });
+            const p = article.created_at.slice(0, 10);
+            news[x] = {
+                title: article.title,
+                author: a,
+                description: article.seo.description,
+                content: article.body,
+                image: article.image.data.urls.uploaded.original,
+                date: p,
+                id: x.toString(),
+            };
             x++;
         });
-        console.log(news);
+        return news;
     })
         .catch(err => console.error(err));
-    return news;
 }
 //# sourceMappingURL=News.js.map

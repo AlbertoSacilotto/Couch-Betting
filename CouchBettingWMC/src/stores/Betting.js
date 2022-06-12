@@ -1,21 +1,63 @@
-var BetType;
+import { upGames } from "./Upcoming-Games";
+import { finishedGames } from "./Finished-Games";
+import { goto } from "$app/navigation";
+import jQuery from "jquery";
+export var BetType;
 (function (BetType) {
-    BetType[BetType["Score"] = 0] = "Score";
-    BetType[BetType["Goals"] = 1] = "Goals";
-    BetType[BetType["WinnerHome"] = 2] = "WinnerHome";
-    BetType[BetType["WinnerGuest"] = 3] = "WinnerGuest";
-    BetType[BetType["Draw"] = 4] = "Draw";
+    BetType[BetType["WinnerHome"] = 0] = "WinnerHome";
+    BetType[BetType["WinnerGuest"] = 1] = "WinnerGuest";
+    BetType[BetType["Draw"] = 2] = "Draw";
+    BetType[BetType["Score"] = 3] = "Score";
+    BetType[BetType["Goals"] = 4] = "Goals";
 })(BetType || (BetType = {}));
 export class BettSystem {
-    AddBetToUser(bet) {
+    AddBetToUser(cost, win, id, type, homeGoals, guestGoals) {
+        let bet;
+        upGames.map(item => {
+            if (item.id == id) {
+                let textt = "";
+                console.log(type);
+                if (type == 0) {
+                    textt = "The match will be a draw";
+                }
+                else if (type == 1) {
+                    textt = `${item.homeName} will win against ${item.guestName}`;
+                }
+                else if (type == 2) {
+                    textt = `${item.guestName} will win against ${item.homeName}`;
+                }
+                else if (type == 3) {
+                    textt = `${item.homeName} will play ${homeGoals} : ${guestGoals} against ${item.guestName}`;
+                }
+                else if (type == 4) {
+                    textt = `There will be ${homeGoals} goals scored`;
+                }
+                bet = {
+                    id: id,
+                    home: item.homeName,
+                    guest: item.guestName,
+                    homeIMG: item.homeImage,
+                    guestIMG: item.guestImage,
+                    guestGoals: guestGoals,
+                    homeGoals: homeGoals,
+                    cost: cost,
+                    betType: type,
+                    win: win,
+                    text: textt,
+                };
+            }
+        });
+        loggedAccount.bets.push(bet);
         const user = {
             name: loggedAccount.name,
             password: loggedAccount.password,
             coins: loggedAccount.coins - bet.cost,
-            bets: loggedAccount.bets.push(bet),
+            bets: loggedAccount.bets,
+            wonBets: loggedAccount.wonBets,
+            lostBets: loggedAccount.lostBets
         };
-        $.ajax({
-            url: "http://localhost:4000/account/" + loggedAccount.id.toString(),
+        jQuery.ajax({
+            url: "http://localhost:4000/accounts/" + loggedAccount.id.toString(),
             data: JSON.stringify(user),
             type: 'PATCH',
             contentType: 'application/json',
@@ -23,5 +65,120 @@ export class BettSystem {
             success: _ => { console.log("success"); }
         });
     }
+    GetWins(b) {
+        const won = [];
+        finishedGames.map(item => {
+            loggedAccount.bets.map(bet => {
+                if (bet.id == item.id) {
+                    console.log(item.homeGoals);
+                    console.log(item.guestGoals);
+                    if ((bet.betType == 0 && item.guestGoals == item.homeGoals) || (bet.betType == 1 && item.homeGoals > item.guestGoals) || (bet.betType == 2 && item.guestGoals > item.homeGoals) || (bet.betType == 3 && item.homeGoals == bet.homeGoals && item.guestGoals == bet.guestGoals) || (bet.betType == 4 && item.homeGoals + item.guestGoals == bet.homeGoals)) {
+                        won.push(bet);
+                        if (b == true) {
+                            this.AddWin(bet.win, bet.id);
+                        }
+                    }
+                }
+            });
+        });
+        return won;
+    }
+    GetLoses(b) {
+        const lost = [];
+        finishedGames.map(item => {
+            loggedAccount.bets.map(bet => {
+                if (bet.id == item.id) {
+                    if ((bet.betType == BetType.Draw && item.guestGoals != item.homeGoals) || (bet.betType == BetType.WinnerHome && item.homeGoals < item.guestGoals) || (bet.betType == BetType.WinnerGuest && item.guestGoals < item.homeGoals) || (bet.betType == BetType.Score && item.homeGoals != bet.homeGoals && item.guestGoals != bet.guestGoals) || (bet.betType == BetType.Goals && item.homeGoals + item.guestGoals != bet.homeGoals)) {
+                        lost.push(bet);
+                        if (b == true) {
+                            this.AddLose(bet.id);
+                        }
+                    }
+                }
+            });
+        });
+        return lost;
+    }
+    AddLose(id) {
+        loggedAccount.bets.map(item => {
+            if (item.id == id) {
+                loggedAccount.lostBets.push(item);
+            }
+        });
+        loggedAccount.bets = loggedAccount.bets.filter(n => { return n.id != id; });
+        const user = {
+            name: loggedAccount.name,
+            password: loggedAccount.password,
+            coins: loggedAccount.coins,
+            bets: loggedAccount.bets,
+            wonBets: loggedAccount.wonBets,
+            lostBets: loggedAccount.lostBets
+        };
+        jQuery.ajax({
+            url: "http://localhost:4000/accounts/" + loggedAccount.id.toString(),
+            data: JSON.stringify(user),
+            type: 'PATCH',
+            contentType: 'application/json',
+            processData: false,
+            success: _ => {
+                console.log("success");
+            }
+        });
+    }
+    AddWin(amount, id) {
+        loggedAccount.coins += parseInt(amount.toFixed());
+        loggedAccount.bets.map(bet => {
+            if (id == bet.id) {
+                loggedAccount.wonBets.push(bet);
+            }
+        });
+        loggedAccount.bets = loggedAccount.bets.filter(n => { return n.id != id; });
+        const user = {
+            name: loggedAccount.name,
+            password: loggedAccount.password,
+            coins: loggedAccount.coins,
+            bets: loggedAccount.bets,
+            wonBets: loggedAccount.wonBets,
+            lostBets: loggedAccount.lostBets
+        };
+        jQuery.ajax({
+            url: "http://localhost:4000/accounts/" + loggedAccount.id.toString(),
+            data: JSON.stringify(user),
+            type: 'PATCH',
+            contentType: 'application/json',
+            processData: false,
+            success: _ => { console.log("success"); }
+        });
+    }
+    check(amount, win, id, type, homeGoals, guestGoals) {
+        let a = false;
+        loggedAccount.bets.map(item => {
+            if (id == item.id) {
+                a = true;
+            }
+        });
+        const b = confirm(`Do you really want to place ${amount} coins on this game`);
+        if (amount > 0 && amount <= loggedAccount.coins && b == true && a == false) {
+            this.AddBetToUser(amount, win, id, type, homeGoals, guestGoals);
+            goto("/betting");
+            setTimeout(() => { window.location.reload(); }, 350);
+        }
+        else if (a != false) {
+            alert("You already placed a bet on this game!");
+            goto("/games");
+        }
+        else if (b == false) {
+            alert("Bet was canceled!");
+            goto("/");
+        }
+        else {
+            alert("You have to place a valid amount of coins!");
+        }
+    }
+}
+export const loggedAccount = await GetUser();
+async function GetUser() {
+    const users = await jQuery.get("http://localhost:4000/accounts/");
+    return users[0];
 }
 //# sourceMappingURL=Betting.js.map

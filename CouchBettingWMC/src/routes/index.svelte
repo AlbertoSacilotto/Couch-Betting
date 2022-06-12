@@ -10,7 +10,6 @@
     <title>Couch Betting - Home</title>
 </svelte:head>
 <article id="HomeGrid">
-    
     <div id="HomeCol">
         <div id="HomeCarousell">
             <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
@@ -73,8 +72,8 @@
     #HomeGrid {
     display: grid;
     grid-template-columns: 77.5% 22.5%;
-    grid-template-rows: 50% 6.5%;
-    grid-template-areas:"a b""a b";
+    grid-template-rows: 70%;
+    grid-template-areas:"a b";
     }
 
   #LiveGamesCol

@@ -12,6 +12,7 @@ export interface UpcomingGame {
     stadium: string;
     referee: string;
     city:string;
+    id:number;
 }
 
 /*export async function GetUpcomingGames(length:number) : Promise<any> {
@@ -102,6 +103,7 @@ export interface UpcomingGame {
             stadium: teams[4].teamStadium,
             referee: "John Peterson",
             city:teams[4].teamCity,
+            id: 21,
         },
         {
             homeImage: teams[5].teamLogo,
@@ -115,6 +117,7 @@ export interface UpcomingGame {
             stadium: teams[5].teamStadium,
             referee: "Yanis Smith",
             city:teams[5].teamCity,
+            id: 20,
         },
         {
             homeImage: teams[13].teamLogo,
@@ -127,7 +130,8 @@ export interface UpcomingGame {
             hour: "15:30",
             stadium: teams[13].teamStadium,
             referee: "Abdul Samet",
-            city:teams[13].teamCity
+            city:teams[13].teamCity,
+            id: 19,
         },
         {
             homeImage: teams[8].teamLogo,
@@ -140,7 +144,8 @@ export interface UpcomingGame {
             hour: "16:00",
             stadium: teams[8].teamStadium,
             referee: "Andrei Kaukal",
-            city:teams[8].teamCity
+            city:teams[8].teamCity,
+            id: 18,
         },
         {
             homeImage: teams[9].teamLogo,
@@ -153,7 +158,8 @@ export interface UpcomingGame {
             hour: "14:00",
             stadium: teams[9].teamStadium,
             referee: "John Grey",
-            city:teams[9].teamCity
+            city:teams[9].teamCity,
+            id: 17,
         },
         {
             homeImage: teams[3].teamLogo,
@@ -167,6 +173,7 @@ export interface UpcomingGame {
             stadium: teams[3].teamStadium,
             referee: "Walter White",
             city:teams[3].teamCity,
+            id: 16,
         },
     ]
 

@@ -84,6 +84,7 @@ export const liveGames = [
         homeGoals: 2,
         guestGoals: 1,
         minute: 30,
+        id: 15,
     },
     {
         homeImage: teams[18].teamLogo,
@@ -98,6 +99,7 @@ export const liveGames = [
         homeGoals: 0,
         guestGoals: 1,
         minute: 60,
+        id: 14,
     },
     {
         homeImage: teams[5].teamLogo,
@@ -112,6 +114,7 @@ export const liveGames = [
         homeGoals: 2,
         guestGoals: 2,
         minute: 61,
+        id: 13,
     },
     {
         homeImage: teams[0].teamLogo,
@@ -126,6 +129,7 @@ export const liveGames = [
         homeGoals: 1,
         guestGoals: 0,
         minute: 89,
+        id: 12,
     },
     {
         homeImage: teams[7].teamLogo,
@@ -140,6 +144,7 @@ export const liveGames = [
         homeGoals: 1,
         guestGoals: 5,
         minute: 90,
+        id: 11,
     },
     {
         homeImage: teams[13].teamLogo,
@@ -154,6 +159,7 @@ export const liveGames = [
         homeGoals: 1,
         guestGoals: 0,
         minute: 90,
+        id: 10,
     },
 ];
 //# sourceMappingURL=Live-Games.js.map
