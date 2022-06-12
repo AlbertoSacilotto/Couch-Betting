@@ -17,15 +17,13 @@ export async function GetNewsFromApi() {
     };
     const news: News[] = [];
 
-    //const url = "https://newsapi.org/v2/top-headlines?country=gb&category=sports&apiKey=e8517c35369347f8861fbe8a136f438b";
-    //const url = "https://newsapi.org/v2/top-headlines?country=gb&category=sports&apiKey=96795eb66ddc4b19a456b67bf13c7573";
     const url = "https://livescore6.p.rapidapi.com/news/v2/list-by-sport?category=2021020913320920836&page=1";
     return await fetch(url, options)
         .then(response => response.json())
         .then(data => {
 
             const list = data.data;
-            let x = 0;
+            let x= 0;
 
             list.map(article => {
                 let a = "";
@@ -47,5 +45,4 @@ export async function GetNewsFromApi() {
             });
             return news;
         })
-        .catch(err => console.error(err));
 }

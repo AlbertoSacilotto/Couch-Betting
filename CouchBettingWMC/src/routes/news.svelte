@@ -4,14 +4,14 @@
     import {GetNewsFromApi} from "../stores/News";
     let news
     onMount(async()=>{
-        news = await GetNewsFromApi();
+        news = await GetNewsFromApi()
     })
 
 </script>
-<div class="container d-flex" id="Place">
+<div class="container" id="Place">
     {#if news != undefined}
         {#each news as n}
-            <NewsCard style="border-bottom: #0E0B16 solid 0.2em;" news ={n}/>
+            <NewsCard news ={n}/>
         {/each}
     {/if}
 </div>
@@ -24,7 +24,7 @@
         overflow-y: hidden;
         margin-bottom: 23.75em;
         height: 34em;
-        border-left: solid white 0.2em;
-        border-right: solid white 0.2em;
+        border-left: solid white 0.01em;
+        border-right: solid white 0.01em;
     }
 </style>

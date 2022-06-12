@@ -7,8 +7,6 @@ export async function GetNewsFromApi() {
         }
     };
     const news = [];
-    //const url = "https://newsapi.org/v2/top-headlines?country=gb&category=sports&apiKey=e8517c35369347f8861fbe8a136f438b";
-    //const url = "https://newsapi.org/v2/top-headlines?country=gb&category=sports&apiKey=96795eb66ddc4b19a456b67bf13c7573";
     const url = "https://livescore6.p.rapidapi.com/news/v2/list-by-sport?category=2021020913320920836&page=1";
     return await fetch(url, options)
         .then(response => response.json())
@@ -33,7 +31,6 @@ export async function GetNewsFromApi() {
             x++;
         });
         return news;
-    })
-        .catch(err => console.error(err));
+    });
 }
 //# sourceMappingURL=News.js.map

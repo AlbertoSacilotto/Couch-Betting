@@ -18,8 +18,8 @@
 </script>
 
 <div class="p-1 m-3 float-start">
-    <div class="card" style="width: 18rem;height: 20.8rem">
-        <div class="card-body" id="cardDesign">
+    <div class="card" style="width: 18rem;height: 20.8rem" id="cardDesign">
+        <div class="card-body">
             <div class="d-flex justify-content-around mt-4">
                 <div>
                     <h6><img src="{liveGame.homeImage}" class="card-img-top TeamPics m-1" alt="{liveGame.homeName} Image"></h6>

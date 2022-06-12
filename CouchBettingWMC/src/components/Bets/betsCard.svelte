@@ -22,20 +22,20 @@
             case "3":
                 if(home_goals >= 3 && guest_goals >= 3)
                 {
-                    win = odds_draw * amount * 12;
+                    win = odds_draw * amount * 6;
                 }
                 else {
-                    win = odds_draw * amount * 5;
+                    win = odds_draw * amount * 3;
                 }
                 break;
             case "4":
                 if(home_goals >= 0 && home_goals< 5)
                 {
-                    win = odds_draw * amount * 2;
+                    win = odds_draw * amount * 1.5;
                 }
                 else
                 {
-                    win = odds_draw * amount * 4;
+                    win = odds_draw * amount * 3;
                 }
 
                 break;

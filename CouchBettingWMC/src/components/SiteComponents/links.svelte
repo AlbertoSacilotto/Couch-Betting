@@ -68,7 +68,6 @@
         background-color: #000000;
         color: white;
         margin-top: -23.75em;
-        padding-top: 2em;
-        padding-bottom: 2em;
+        padding-top: 6em;
     }
 </style>

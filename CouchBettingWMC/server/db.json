@@ -4,7 +4,7 @@
       "id": "0",
       "name": "YanisFer",
       "password": "yan",
-      "coins": 2565,
+      "coins": 6001,
       "bets": [
         {
           "id": 18,
@@ -12,53 +12,13 @@
           "guest": "Tottenham",
           "homeIMG": "https://media.api-sports.io/football/teams/45.png",
           "guestIMG": "https://media.api-sports.io/football/teams/47.png",
-          "guestGoals": "5",
-          "homeGoals": "5",
-          "cost": "404",
-          "betType": "1",
-          "win": 595.5149730201533,
-          "text": "Everton will win against Tottenham"
-        }
-      ],
-      "wonBets": [
-        {
-          "id": 16,
-          "home": "Wolves",
-          "guest": "Crystal Palace",
-          "homeIMG": "https://media.api-sports.io/football/teams/39.png",
-          "guestIMG": "https://media.api-sports.io/football/teams/52.png",
-          "guestGoals": 0,
+          "guestGoals": "1",
           "homeGoals": "3",
-          "cost": "190",
-          "betType": "4",
-          "win": 959.7048827696935,
-          "text": "There will be 3 goals scored"
-        },
-        {
-          "id": 21,
-          "home": "Liverpool",
-          "guest": "Brighton",
-          "homeIMG": "https://media.api-sports.io/football/teams/40.png",
-          "guestIMG": "https://media.api-sports.io/football/teams/51.png",
-          "guestGoals": 0,
-          "homeGoals": 0,
-          "cost": "199",
-          "betType": "0",
-          "win": 257.9345329943985,
-          "text": "The match will be a draw"
-        },
-        {
-          "id": 17,
-          "home": "Leicester",
-          "guest": "Leeds",
-          "homeIMG": "https://media.api-sports.io/football/teams/46.png",
-          "guestIMG": "https://media.api-sports.io/football/teams/63.png",
-          "guestGoals": 0,
-          "homeGoals": 0,
-          "cost": "579",
-          "betType": "1",
-          "win": 1000.7611289968005,
-          "text": "Leicester will win against Leeds"
+          "cost": "2000",
+          "betType": "3",
+          "win": 9013.617930805225,
+          "text": "Everton will play 3 : 1 against Tottenham",
+          "state": 0
         },
         {
           "id": 16,
@@ -67,26 +27,70 @@
           "homeIMG": "https://media.api-sports.io/football/teams/39.png",
           "guestIMG": "https://media.api-sports.io/football/teams/52.png",
           "guestGoals": 0,
-          "homeGoals": "4",
-          "cost": "100",
-          "betType": "4",
-          "win": 323.5471987390226,
-          "text": "There will be 4 goals scored"
+          "homeGoals": 0,
+          "cost": "3000",
+          "betType": "1",
+          "win": 3736.41641724865,
+          "text": "Wolves will win against Crystal Palace",
+          "state": 0
         }
       ],
-      "lostBets": [
+      "historyOfBets": [
         {
-          "id": 17,
-          "home": "Leicester",
-          "guest": "Leeds",
-          "homeIMG": "https://media.api-sports.io/football/teams/46.png",
-          "guestIMG": "https://media.api-sports.io/football/teams/63.png",
-          "guestGoals": 0,
-          "homeGoals": 0,
-          "cost": "100",
+          "id": 16,
+          "home": "Wolves",
+          "guest": "Crystal Palace",
+          "homeIMG": "https://media.api-sports.io/football/teams/39.png",
+          "guestIMG": "https://media.api-sports.io/football/teams/52.png",
+          "guestGoals": 2,
+          "homeGoals": 1,
+          "cost": "1100",
+          "betType": "3",
+          "win": 8727.457010265702,
+          "text": "Wolves will play 1 : 2 against Crystal Palace",
+          "state": 1
+        },
+        {
+          "id": 18,
+          "home": "Everton",
+          "guest": "Tottenham",
+          "homeIMG": "https://media.api-sports.io/football/teams/45.png",
+          "guestIMG": "https://media.api-sports.io/football/teams/47.png",
+          "guestGoals": 1,
+          "homeGoals": 2,
+          "cost": "800",
           "betType": "2",
-          "win": 179.17758829413387,
-          "text": "Leeds will win against Leicester"
+          "win": 1553.7875522111594,
+          "text": "Tottenham will win against Everton",
+          "state": 2
+        },
+        {
+          "id": 20,
+          "home": "Southampton",
+          "guest": "Arsenal",
+          "homeIMG": "https://media.api-sports.io/football/teams/41.png",
+          "guestIMG": "https://media.api-sports.io/football/teams/42.png",
+          "guestGoals": 0,
+          "homeGoals": 1,
+          "cost": "1200",
+          "betType": "3",
+          "win": 8039.256770754246,
+          "text": "Southampton will play 3 : 1 against Arsenal",
+          "state": 2
+        },
+        {
+          "id": 19,
+          "home": "Manchester City",
+          "guest": "Newcastle",
+          "homeIMG": "https://media.api-sports.io/football/teams/50.png",
+          "guestIMG": "https://media.api-sports.io/football/teams/34.png",
+          "guestGoals": 1,
+          "homeGoals": 3,
+          "cost": "1000",
+          "betType": "4",
+          "win": 2204.766974934595,
+          "text": "There will be 3 goals scored",
+          "state": 2
         }
       ]
     }

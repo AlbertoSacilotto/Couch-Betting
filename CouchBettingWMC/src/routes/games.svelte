@@ -62,7 +62,7 @@
         overflow-x: hidden;
         display: grid;
         grid-template-columns: 35% 65%;
-        grid-template-rows:6% 30.1% 6% 30.1%;
+        grid-template-rows:6% 30.1% 6% 29.6%;
         grid-template-areas:
         "live up"
         "a b"
@@ -79,7 +79,8 @@
         flex-direction: column;
         float: left;
         height: 100%;
-        overflow: scroll;
+        overflow-y: scroll;
+        overflow-x: hidden;
     }
 
     #UpcomingGamesCol

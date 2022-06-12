@@ -16,8 +16,8 @@
     }
 </script>
 <div id="right" class="mx-3 mb-3">
-    <div class="card" style="width: 20rem; height: 20.5rem">
-        <div class="card-body" id="cardDesign">
+    <div class="card" style="width: 20rem; height: 20.5rem" id="cardDesign">
+        <div class="card-body">
             <div class="d-flex justify-content-around mt-4">
                 <div><h6><img src="{finishedGame.homeImage}" class="card-img-top TeamPics m-1" alt="{finishedGame.homeName} Image"></h6></div>
                 <div class="justify-content-center"><h3 class="card-title m-1">_</h3></div>

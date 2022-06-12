@@ -18,8 +18,8 @@
 </script>
 
 <div id="right" class="mx-3 mt-1">
-    <div class="card" style="width: 20rem;height: 21rem;">
-        <div class="card-body" id="cardDesign">
+    <div class="card" style="width: 20rem;height: 21rem;" id="cardDesign">
+        <div class="card-body">
             <div class="d-flex justify-content-around mt-4">
                 <div>
                     <h6><img src="{upcomingGame.homeImage}" class="card-img-top TeamPics m-1" alt="{upcomingGame.homeName} Image"></h6>

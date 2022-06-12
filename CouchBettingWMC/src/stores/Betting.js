@@ -44,6 +44,7 @@ export class BettSystem {
                     betType: type,
                     win: win,
                     text: textt,
+                    state: 0,
                 };
             }
         });
@@ -53,8 +54,7 @@ export class BettSystem {
             password: loggedAccount.password,
             coins: loggedAccount.coins - bet.cost,
             bets: loggedAccount.bets,
-            wonBets: loggedAccount.wonBets,
-            lostBets: loggedAccount.lostBets
+            historyOfBets: loggedAccount.historyOfBets,
         };
         jQuery.ajax({
             url: "http://localhost:4000/accounts/" + loggedAccount.id.toString(),
@@ -73,6 +73,9 @@ export class BettSystem {
                     console.log(item.homeGoals);
                     console.log(item.guestGoals);
                     if ((bet.betType == 0 && item.guestGoals == item.homeGoals) || (bet.betType == 1 && item.homeGoals > item.guestGoals) || (bet.betType == 2 && item.guestGoals > item.homeGoals) || (bet.betType == 3 && item.homeGoals == bet.homeGoals && item.guestGoals == bet.guestGoals) || (bet.betType == 4 && item.homeGoals + item.guestGoals == bet.homeGoals)) {
+                        bet.state = 1;
+                        bet.homeGoals = item.homeGoals;
+                        bet.guestGoals = item.guestGoals;
                         won.push(bet);
                         if (b == true) {
                             this.AddWin(bet.win, bet.id);
@@ -88,7 +91,10 @@ export class BettSystem {
         finishedGames.map(item => {
             loggedAccount.bets.map(bet => {
                 if (bet.id == item.id) {
-                    if ((bet.betType == BetType.Draw && item.guestGoals != item.homeGoals) || (bet.betType == BetType.WinnerHome && item.homeGoals < item.guestGoals) || (bet.betType == BetType.WinnerGuest && item.guestGoals < item.homeGoals) || (bet.betType == BetType.Score && item.homeGoals != bet.homeGoals && item.guestGoals != bet.guestGoals) || (bet.betType == BetType.Goals && item.homeGoals + item.guestGoals != bet.homeGoals)) {
+                    if ((bet.betType == 0 && item.guestGoals != item.homeGoals) || (bet.betType == 1 && item.homeGoals < item.guestGoals) || (bet.betType == 2 && item.guestGoals < item.homeGoals) || (bet.betType == 3 && item.homeGoals != bet.homeGoals && item.guestGoals != bet.guestGoals) || (bet.betType == 4 && item.homeGoals + item.guestGoals != bet.homeGoals)) {
+                        bet.state = 2;
+                        bet.homeGoals = item.homeGoals;
+                        bet.guestGoals = item.guestGoals;
                         lost.push(bet);
                         if (b == true) {
                             this.AddLose(bet.id);
@@ -102,7 +108,7 @@ export class BettSystem {
     AddLose(id) {
         loggedAccount.bets.map(item => {
             if (item.id == id) {
-                loggedAccount.lostBets.push(item);
+                loggedAccount.historyOfBets.push(item);
             }
         });
         loggedAccount.bets = loggedAccount.bets.filter(n => { return n.id != id; });
@@ -111,8 +117,7 @@ export class BettSystem {
             password: loggedAccount.password,
             coins: loggedAccount.coins,
             bets: loggedAccount.bets,
-            wonBets: loggedAccount.wonBets,
-            lostBets: loggedAccount.lostBets
+            historyOfBets: loggedAccount.historyOfBets
         };
         jQuery.ajax({
             url: "http://localhost:4000/accounts/" + loggedAccount.id.toString(),
@@ -129,7 +134,7 @@ export class BettSystem {
         loggedAccount.coins += parseInt(amount.toFixed());
         loggedAccount.bets.map(bet => {
             if (id == bet.id) {
-                loggedAccount.wonBets.push(bet);
+                loggedAccount.historyOfBets.push(bet);
             }
         });
         loggedAccount.bets = loggedAccount.bets.filter(n => { return n.id != id; });
@@ -138,8 +143,7 @@ export class BettSystem {
             password: loggedAccount.password,
             coins: loggedAccount.coins,
             bets: loggedAccount.bets,
-            wonBets: loggedAccount.wonBets,
-            lostBets: loggedAccount.lostBets
+            historyOfBets: loggedAccount.historyOfBets
         };
         jQuery.ajax({
             url: "http://localhost:4000/accounts/" + loggedAccount.id.toString(),

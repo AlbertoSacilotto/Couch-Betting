@@ -6,8 +6,7 @@ export interface User {
     password:string,
     coins: number,
     bets: Bet[],
-    wonBets: Bet[],
-    lostBets: Bet[]
+    historyOfBets: Bet[]
 }
 const unallowedSigns= ['*', '/', '"', '-', '+', '#', '[', ']', '{', '}', '=', ';', ':', '@', '|', '<', '>', '?', '!', ',',];
 

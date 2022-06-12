@@ -20,8 +20,8 @@
     });
 </script>
 <div class="mx-3 mt-1">
-    <div class="card" style="width: 20rem;height: 25rem;">
-        <div class="card-body" id="cardDesign">
+    <div class="card" style="width: 20rem;height: 25rem;" id="cardDesign">
+        <div class="card-body">
             {#if live == true}
                 <img id="d" src="https://upload.wikimedia.org/wikipedia/commons/8/83/Green_dot.svg" width="20" alt="sdf">
             {:else}
@@ -52,7 +52,7 @@
 
             {#if live == true}
                 <div class="cen justify-content-around mt-3">
-                    <h6>{game.homeGoals}&nbsp&nbsp&nbsp&nbsp:&nbsp&nbsp&nbsp&nbsp{game.guestGoals}</h6>
+                    <h6>{game.homeGoals}&nbsp&nbsp&nbsp&nbsp-&nbsp&nbsp&nbsp&nbsp{game.guestGoals}</h6>
                 </div>
                 <h6 class="cen card-text pb-2 m-2" id="live">{game.minute}'</h6>
             {:else}
