@@ -69,7 +69,7 @@
 </script>
 
 <div class="d-flex justify-content-center py-5">
-    <div class="px-4 card" style="width: 70em; height: 60em">
+    <div class="px-4 card" style="width: 70em; height: 55em">
         <div class="card-body">
             <div class="d-flex justify-content-around">
                 <div>
@@ -146,11 +146,11 @@
                     <button type="button" on:click={decrement} class="btn btn-primary">-</button>
                     <input id="coins" class="form-control" placeholder="{amount}" bind:value={amount} aria-label="input example">
                     <button type="button" on:click={increment} class="btn btn-primary">+</button>
-                    <input class="form-control w-25 px-4" type="number" placeholder="outcome: {Math.floor(win)}" aria-label="input example" disabled>
+                    <input id="win" class="form-control w-25 px-4" type="number" placeholder="outcome: {Math.floor(win)}" aria-label="input example" disabled>
                 </div>
                 <button class="m-2 btn btn-success" on:click={b.check(amount,win,upcomingGame.id,type,home_goals,guest_goals)}>Place this Bet</button>
             </div>
-
+            <h6><a class="m-2 " href="/games" type="button">Go Back</a></h6>
         </div>
     </div>
 </div>
@@ -174,5 +174,8 @@
     }
     .p{
         width: 4.5em;
+    }
+    #win{
+        margin-left: 5em;
     }
 </style>

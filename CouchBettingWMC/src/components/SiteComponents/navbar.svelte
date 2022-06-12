@@ -16,7 +16,6 @@
           <a class="nav-link navText text-white" href="/">Home</a>
           <a class="nav-link navText text-white" href="/games">Games</a>
           <a class="nav-link navText text-white" href="/news">News</a>
-          <a class="nav-link navText text-white" href="/fantasyleague">Fantasy Leauge</a>
           <a class="nav-link navText text-white" href="/betting">Betting</a>
           <a class="nav-link navText text-white" href="/about">About</a>
           

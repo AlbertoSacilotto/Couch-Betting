@@ -41,8 +41,8 @@
               
         </div>
         <div class="m-4 p-4 text-center">
-            <h1>Welcome to Couch Betting</h1>
-            <h4><em>Bet wherever and whenever</em></h4>
+            <p id="title">Welcome to Couch Betting</p>
+            <h2><em>Bet wherever and whenever</em></h2>
         </div>
     </div>
     <div id="LiveGamesCol" class="m-1 pt-4 text-center rounded-bottom">
@@ -69,6 +69,10 @@
     
 </article>
 <style>
+    #title{
+        margin-top: 0.75em;
+        font-size: 5em;
+    }
     #HomeGrid {
     display: grid;
     grid-template-columns: 77.5% 22.5%;

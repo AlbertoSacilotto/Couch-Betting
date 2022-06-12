@@ -19,14 +19,6 @@ export interface Bet{
     state: number
 }
 
-export enum BetType{
-    WinnerHome,
-    WinnerGuest,
-    Draw,
-    Score,
-    Goals,
-}
-
 export class BettSystem
 {
     public AddBetToUser(cost:number,win:number,id:number,type:number,homeGoals, guestGoals)

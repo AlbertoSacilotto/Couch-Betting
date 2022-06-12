@@ -23,7 +23,7 @@
             {#if news.author != null&&news.author != "" && news.author!= undefined}
                 <p>Written by {news.author}</p>
             {/if}
-            <p>publish date: {news.date}</p>
+            <p>published on: {news.date}</p>
             <a href="{url}" type="button">Go Back</a>
         </div>
     </div>
@@ -32,7 +32,7 @@
     #NewsImage
     {
         width: 50em;
-        border: #A239CA solid 0.2em ;
+        border: #A239CA solid 0.05em ;
         border-radius: 0.4em;
     }
 

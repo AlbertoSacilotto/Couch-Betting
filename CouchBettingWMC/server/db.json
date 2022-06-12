@@ -4,28 +4,8 @@
       "id": "0",
       "name": "YanisFer",
       "password": "yan",
-<<<<<<< HEAD
-      "coins": 6001,
-=======
-      "coins": 1000,
->>>>>>> f6fb6d50d53d6caccbaffdc3653a7241b7113461
+      "coins": 5597,
       "bets": [
-        {
-          "id": 18,
-          "home": "Everton",
-          "guest": "Tottenham",
-          "homeIMG": "https://media.api-sports.io/football/teams/45.png",
-          "guestIMG": "https://media.api-sports.io/football/teams/47.png",
-<<<<<<< HEAD
-          "guestGoals": "1",
-=======
-          "guestGoals": "5",
-          "homeGoals": "5",
-          "cost": "404",
-          "betType": "1",
-          "win": 595.5149730201533,
-          "text": "Everton will win against Tottenham"
-        },
         {
           "id": 21,
           "home": "Liverpool",
@@ -38,36 +18,19 @@
           "betType": "0",
           "win": 2302.661481920184,
           "text": "The match will be a draw"
-        }
-      ],
-      "wonBets": [
-        {
-          "id": 16,
-          "home": "Wolves",
-          "guest": "Crystal Palace",
-          "homeIMG": "https://media.api-sports.io/football/teams/39.png",
-          "guestIMG": "https://media.api-sports.io/football/teams/52.png",
-          "guestGoals": 0,
->>>>>>> f6fb6d50d53d6caccbaffdc3653a7241b7113461
-          "homeGoals": "3",
-          "cost": "2000",
-          "betType": "3",
-          "win": 9013.617930805225,
-          "text": "Everton will play 3 : 1 against Tottenham",
-          "state": 0
         },
         {
-          "id": 16,
-          "home": "Wolves",
-          "guest": "Crystal Palace",
-          "homeIMG": "https://media.api-sports.io/football/teams/39.png",
-          "guestIMG": "https://media.api-sports.io/football/teams/52.png",
+          "id": 17,
+          "home": "Leicester",
+          "guest": "Leeds",
+          "homeIMG": "https://media.api-sports.io/football/teams/46.png",
+          "guestIMG": "https://media.api-sports.io/football/teams/63.png",
           "guestGoals": 0,
           "homeGoals": 0,
-          "cost": "3000",
-          "betType": "1",
-          "win": 3736.41641724865,
-          "text": "Wolves will win against Crystal Palace",
+          "cost": "1000",
+          "betType": "0",
+          "win": 1701.1145948229544,
+          "text": "The match will be a draw",
           "state": 0
         }
       ],
@@ -127,57 +90,22 @@
           "win": 2204.766974934595,
           "text": "There will be 3 goals scored",
           "state": 2
-        }
-      ]
-    },
-    {
-      "id": "1",
-      "name": "Arsim",
-      "password": "ars",
-      "coins": 0,
-      "bets": [
+        },
         {
           "id": 18,
           "home": "Everton",
           "guest": "Tottenham",
           "homeIMG": "https://media.api-sports.io/football/teams/45.png",
           "guestIMG": "https://media.api-sports.io/football/teams/47.png",
-          "guestGoals": "5",
-          "homeGoals": "5",
+          "guestGoals": 1,
+          "homeGoals": 2,
           "cost": "404",
           "betType": "1",
           "win": 595.5149730201533,
-          "text": "Everton will win against Tottenham"
-        },
-        {
-          "id": 21,
-          "home": "Liverpool",
-          "guest": "Brighton",
-          "homeIMG": "https://media.api-sports.io/football/teams/40.png",
-          "guestIMG": "https://media.api-sports.io/football/teams/51.png",
-          "guestGoals": 0,
-          "homeGoals": 0,
-          "cost": "9900",
-          "betType": "1",
-          "win": 17491.92231828828,
-          "text": "Liverpool will win against Brighton"
-        },
-        {
-          "id": 20,
-          "home": "Southampton",
-          "guest": "Arsenal",
-          "homeIMG": "https://media.api-sports.io/football/teams/41.png",
-          "guestIMG": "https://media.api-sports.io/football/teams/42.png",
-          "guestGoals": 0,
-          "homeGoals": "5",
-          "cost": "100",
-          "betType": "3",
-          "win": 649.4930248118412,
-          "text": "Southampton will play 5 : 0 against Arsenal"
+          "text": "Everton will win against Tottenham",
+          "state": 1
         }
-      ],
-      "wonBets": [],
-      "lostBets": []
+      ]
     }
   ]
 }
