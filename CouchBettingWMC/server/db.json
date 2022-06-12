@@ -4,7 +4,7 @@
       "id": "0",
       "name": "YanisFer",
       "password": "yan",
-      "coins": 2565,
+      "coins": 1000,
       "bets": [
         {
           "id": 18,
@@ -18,6 +18,19 @@
           "betType": "1",
           "win": 595.5149730201533,
           "text": "Everton will win against Tottenham"
+        },
+        {
+          "id": 21,
+          "home": "Liverpool",
+          "guest": "Brighton",
+          "homeIMG": "https://media.api-sports.io/football/teams/40.png",
+          "guestIMG": "https://media.api-sports.io/football/teams/51.png",
+          "guestGoals": 0,
+          "homeGoals": 0,
+          "cost": "1565",
+          "betType": "0",
+          "win": 2302.661481920184,
+          "text": "The match will be a draw"
         }
       ],
       "wonBets": [
@@ -89,6 +102,55 @@
           "text": "Leeds will win against Leicester"
         }
       ]
+    },
+    {
+      "id": "1",
+      "name": "Arsim",
+      "password": "ars",
+      "coins": 0,
+      "bets": [
+        {
+          "id": 18,
+          "home": "Everton",
+          "guest": "Tottenham",
+          "homeIMG": "https://media.api-sports.io/football/teams/45.png",
+          "guestIMG": "https://media.api-sports.io/football/teams/47.png",
+          "guestGoals": "5",
+          "homeGoals": "5",
+          "cost": "404",
+          "betType": "1",
+          "win": 595.5149730201533,
+          "text": "Everton will win against Tottenham"
+        },
+        {
+          "id": 21,
+          "home": "Liverpool",
+          "guest": "Brighton",
+          "homeIMG": "https://media.api-sports.io/football/teams/40.png",
+          "guestIMG": "https://media.api-sports.io/football/teams/51.png",
+          "guestGoals": 0,
+          "homeGoals": 0,
+          "cost": "9900",
+          "betType": "1",
+          "win": 17491.92231828828,
+          "text": "Liverpool will win against Brighton"
+        },
+        {
+          "id": 20,
+          "home": "Southampton",
+          "guest": "Arsenal",
+          "homeIMG": "https://media.api-sports.io/football/teams/41.png",
+          "guestIMG": "https://media.api-sports.io/football/teams/42.png",
+          "guestGoals": 0,
+          "homeGoals": "5",
+          "cost": "100",
+          "betType": "3",
+          "win": 649.4930248118412,
+          "text": "Southampton will play 5 : 0 against Arsenal"
+        }
+      ],
+      "wonBets": [],
+      "lostBets": []
     }
   ]
 }

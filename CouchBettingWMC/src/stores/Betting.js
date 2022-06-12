@@ -179,6 +179,6 @@ export class BettSystem {
 export const loggedAccount = await GetUser();
 async function GetUser() {
     const users = await jQuery.get("http://localhost:4000/accounts/");
-    return users[0];
+    return users[Number(localStorage.getItem('uid'))];
 }
 //# sourceMappingURL=Betting.js.map

@@ -1,5 +1,11 @@
 <script lang="ts">
     import {loggedAccount} from "../../stores/Betting";
+    import {onMount} from "svelte";
+
+    let image = "";
+    onMount(() => {
+      image = localStorage.getItem('profilePic');
+    })
     console.log(loggedAccount)
 </script>
 
@@ -29,10 +35,10 @@
         <div class="d-flex">
 
           <div>
-            <a class="nav-link navText text-white rounded disabled ">{loggedAccount.coins}  <img class="pb-2" src="../../../static/KiraCoinPNG.png" width="30"></a>
+            <a class="nav-link navText text-white rounded disabled">{loggedAccount.coins}  <img class="pb-2" src="../../../static/KiraCoinPNG.png" width="30"></a>
           </div>
             <div>
-            <a class="nav-link navText rounded disabled">{loggedAccount.name} <img src="static/abstract-user-flat-4.svg" width="40"></a>
+            <a class="nav-link navText rounded disabled">{loggedAccount.name} <img style="border-radius: 2em" src="{image}" width="40"></a>
           </div>
         </div>
       {/if}
