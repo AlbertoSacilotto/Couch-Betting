@@ -1,0 +1,19 @@
+{
+  "name": "package.json",
+  "version": "1.0.0",
+  "description": "=== Couch Betting * Project Name: Couch Betting  * Description: We want to make a website with a fully functional football-betting system, footballnews website with an integrated Fantasy League System without needing to pay for anything. Our targeted audience are people who are interested in football or betting but cant bet with real money or just people who want to read some footballnews. * Goals: We want to learn how to work with HTML, Typescript, API's and other things that will help us in the future as Software Developers and Coders",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlbertoSacilotto/Couch-Betting.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlbertoSacilotto/Couch-Betting/issues"
+  },
+  "homepage": "https://github.com/AlbertoSacilotto/Couch-Betting#readme"
+}
