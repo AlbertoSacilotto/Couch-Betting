@@ -55,7 +55,11 @@
           <a class="nav-link navText text-white" href="/">Home</a>
           <a class="nav-link navText text-white" href="/games">Games</a>
           <a class="nav-link navText text-white" href="/news">News</a>
-          <a class="nav-link navText text-white" href="/betting">Betting</a>
+          {#if email == ""}
+          <a class="nav-link navText text-white" on:click={LoginGoogle}>Betting</a>
+          {:else}
+            <a class="nav-link navText text-white" href="/betting">Betting</a>
+          {/if}
           <a class="nav-link navText text-white" href="/about">About</a>
           
         </div>

@@ -2,14 +2,6 @@ import { upGames } from "./Upcoming-Games";
 import { finishedGames } from "./Finished-Games";
 import { goto } from "$app/navigation";
 import jQuery from "jquery";
-export var BetType;
-(function (BetType) {
-    BetType[BetType["WinnerHome"] = 0] = "WinnerHome";
-    BetType[BetType["WinnerGuest"] = 1] = "WinnerGuest";
-    BetType[BetType["Draw"] = 2] = "Draw";
-    BetType[BetType["Score"] = 3] = "Score";
-    BetType[BetType["Goals"] = 4] = "Goals";
-})(BetType || (BetType = {}));
 export class BettSystem {
     AddBetToUser(cost, win, id, type, homeGoals, guestGoals) {
         let bet;
@@ -184,7 +176,6 @@ export class BettSystem {
 export const loggedAccount = await GetUser();
 async function GetUser() {
     const users = await jQuery.get("http://localhost:4000/accounts");
-    console.log(users[localStorage.getItem('id')]);
-    return users[localStorage.getItem('id')];
+    return users[parseInt(localStorage.getItem('id')) - 1];
 }
 //# sourceMappingURL=Betting.js.map

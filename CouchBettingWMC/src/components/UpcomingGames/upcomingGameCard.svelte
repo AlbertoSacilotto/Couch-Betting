@@ -1,4 +1,6 @@
 <script>
+    import {loggedAccount} from "../../stores/Betting.js";
+
     export let upcomingGame;
     let extended = false;
     let text ="Show More";
@@ -54,7 +56,8 @@
                 <p class="card-text m-1"><u>Stadium:</u> {upcomingGame.stadium}</p>
                 <p class="card-text m-0"><u>Referee:</u> {upcomingGame.referee}</p>
                 {:else if extended == false}
-                <h6><a href="{url}" class="btn btn-primary mt-3">Place Bet</a></h6>
+                {#if loggedAccount != undefined}
+                <h6><a href="{url}" class="btn btn-primary mt-3">Place Bet</a></h6>{/if}
             {/if}
         </div>
     </div>

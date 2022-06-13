@@ -53,7 +53,8 @@
         width: 70em;
         color: #000000;
         font-size: 1.1em;
-        background-color: #c9c9c9;
+        background-color: #ffffff;
+        padding-bottom: 20em;
     }
     .AboutPics
     {

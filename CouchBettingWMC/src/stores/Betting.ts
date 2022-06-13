@@ -19,14 +19,6 @@ export interface Bet{
     state: number
 }
 
-export enum BetType{
-    WinnerHome,
-    WinnerGuest,
-    Draw,
-    Score,
-    Goals,
-}
-
 export class BettSystem
 {
     public AddBetToUser(cost:number,win:number,id:number,type:number,homeGoals, guestGoals)
@@ -220,6 +212,5 @@ export class BettSystem
 export const loggedAccount:User = await GetUser();
 async function GetUser(){
     const users = <User[]> await jQuery.get("http://localhost:4000/accounts");
-    console.log(users[localStorage.getItem('id')]);
-    return users[localStorage.getItem('id')];
+    return users[parseInt(localStorage.getItem('id')) - 1];
 }

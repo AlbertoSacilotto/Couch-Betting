@@ -26,44 +26,7 @@ export async function getFireUser()
 
     const docRef = collection(db, 'user');
 
-    /*localStorage.setItem('username', docRef);
-    localStorage.setItem('email', res.user.email);
-    localStorage.setItem('profilePic', res.user.photoURL);*/
-
     console.log("LoginData");
     console.log(docRef);
-    //am.LogIn(user.email);
-}
-/*
-try {
-    await runTransaction(db, async (transaction) => {
-        const sfDoc = await transaction.get(sfDocRef);
-        if (!sfDoc.exists()) {
-            throw "Document does not exist!";
-        }
-
-        const newPopulation = sfDoc.data().population + 1;
-        transaction.update(sfDocRef, { population: newPopulation });
-    });
-    console.log("Transaction successfully committed!");
-} catch (e) {
-    console.log("Transaction failed: ", e);
 }
 
-jQuery.get()
-
-
-
-const docRef = collection(db, 'user');
-
-
-const AddData = async(e) =>{
-    e.preventDefault();
-
-    await addDoc(docRef, {
-        user: "userName"
-    })
-}
-
-AddData;
-*/
