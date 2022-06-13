@@ -2,30 +2,10 @@
   "accounts": [
     {
       "id": "0",
-      "name": "YanisFer",
-      "password": "yan",
-<<<<<<< HEAD
-      "coins": 6001,
-=======
-      "coins": 1000,
->>>>>>> f6fb6d50d53d6caccbaffdc3653a7241b7113461
+      "name": "Arsim Saliu",
+      "email": "arsim760@gmail.com",
+      "coins": 10000,
       "bets": [
-        {
-          "id": 18,
-          "home": "Everton",
-          "guest": "Tottenham",
-          "homeIMG": "https://media.api-sports.io/football/teams/45.png",
-          "guestIMG": "https://media.api-sports.io/football/teams/47.png",
-<<<<<<< HEAD
-          "guestGoals": "1",
-=======
-          "guestGoals": "5",
-          "homeGoals": "5",
-          "cost": "404",
-          "betType": "1",
-          "win": 595.5149730201533,
-          "text": "Everton will win against Tottenham"
-        },
         {
           "id": 21,
           "home": "Liverpool",
@@ -34,26 +14,10 @@
           "guestIMG": "https://media.api-sports.io/football/teams/51.png",
           "guestGoals": 0,
           "homeGoals": 0,
-          "cost": "1565",
+          "cost": "100",
           "betType": "0",
-          "win": 2302.661481920184,
-          "text": "The match will be a draw"
-        }
-      ],
-      "wonBets": [
-        {
-          "id": 16,
-          "home": "Wolves",
-          "guest": "Crystal Palace",
-          "homeIMG": "https://media.api-sports.io/football/teams/39.png",
-          "guestIMG": "https://media.api-sports.io/football/teams/52.png",
-          "guestGoals": 0,
->>>>>>> f6fb6d50d53d6caccbaffdc3653a7241b7113461
-          "homeGoals": "3",
-          "cost": "2000",
-          "betType": "3",
-          "win": 9013.617930805225,
-          "text": "Everton will play 3 : 1 against Tottenham",
+          "win": 193.98143439871768,
+          "text": "The match will be a draw",
           "state": 0
         },
         {
@@ -63,28 +27,42 @@
           "homeIMG": "https://media.api-sports.io/football/teams/39.png",
           "guestIMG": "https://media.api-sports.io/football/teams/52.png",
           "guestGoals": 0,
+          "homeGoals": "6",
+          "cost": "694",
+          "betType": "3",
+          "win": 3348.806988138965,
+          "text": "Wolves will play 6 : 0 against Crystal Palace",
+          "state": 0
+        },
+        {
+          "id": 20,
+          "home": "Southampton",
+          "guest": "Arsenal",
+          "homeIMG": "https://media.api-sports.io/football/teams/41.png",
+          "guestIMG": "https://media.api-sports.io/football/teams/42.png",
+          "guestGoals": 0,
           "homeGoals": 0,
-          "cost": "3000",
+          "cost": "100",
           "betType": "1",
-          "win": 3736.41641724865,
-          "text": "Wolves will win against Crystal Palace",
+          "win": 140.67146267198618,
+          "text": "Southampton will win against Arsenal",
           "state": 0
         }
       ],
       "historyOfBets": [
         {
-          "id": 16,
-          "home": "Wolves",
-          "guest": "Crystal Palace",
-          "homeIMG": "https://media.api-sports.io/football/teams/39.png",
-          "guestIMG": "https://media.api-sports.io/football/teams/52.png",
-          "guestGoals": 2,
-          "homeGoals": 1,
-          "cost": "1100",
-          "betType": "3",
-          "win": 8727.457010265702,
-          "text": "Wolves will play 1 : 2 against Crystal Palace",
-          "state": 1
+          "id": 18,
+          "home": "Everton",
+          "guest": "Tottenham",
+          "homeIMG": "https://media.api-sports.io/football/teams/45.png",
+          "guestIMG": "https://media.api-sports.io/football/teams/47.png",
+          "guestGoals": 1,
+          "homeGoals": 2,
+          "cost": 4,
+          "betType": "0",
+          "win": 6.782156309682849,
+          "text": "The match will be a draw",
+          "state": 2
         },
         {
           "id": 18,
@@ -94,61 +72,20 @@
           "guestIMG": "https://media.api-sports.io/football/teams/47.png",
           "guestGoals": 1,
           "homeGoals": 2,
-          "cost": "800",
-          "betType": "2",
-          "win": 1553.7875522111594,
-          "text": "Tottenham will win against Everton",
-          "state": 2
-        },
-        {
-          "id": 20,
-          "home": "Southampton",
-          "guest": "Arsenal",
-          "homeIMG": "https://media.api-sports.io/football/teams/41.png",
-          "guestIMG": "https://media.api-sports.io/football/teams/42.png",
-          "guestGoals": 0,
-          "homeGoals": 1,
-          "cost": "1200",
-          "betType": "3",
-          "win": 8039.256770754246,
-          "text": "Southampton will play 3 : 1 against Arsenal",
-          "state": 2
-        },
-        {
-          "id": 19,
-          "home": "Manchester City",
-          "guest": "Newcastle",
-          "homeIMG": "https://media.api-sports.io/football/teams/50.png",
-          "guestIMG": "https://media.api-sports.io/football/teams/34.png",
-          "guestGoals": 1,
-          "homeGoals": 3,
-          "cost": "1000",
-          "betType": "4",
-          "win": 2204.766974934595,
-          "text": "There will be 3 goals scored",
+          "cost": "102",
+          "betType": "0",
+          "win": 191.53303123193407,
+          "text": "The match will be a draw",
           "state": 2
         }
       ]
     },
     {
       "id": "1",
-      "name": "Arsim",
-      "password": "ars",
-      "coins": 0,
+      "name": "Arsim Saliu",
+      "email": "a.saliu760@gmail.com",
+      "coins": 100006,
       "bets": [
-        {
-          "id": 18,
-          "home": "Everton",
-          "guest": "Tottenham",
-          "homeIMG": "https://media.api-sports.io/football/teams/45.png",
-          "guestIMG": "https://media.api-sports.io/football/teams/47.png",
-          "guestGoals": "5",
-          "homeGoals": "5",
-          "cost": "404",
-          "betType": "1",
-          "win": 595.5149730201533,
-          "text": "Everton will win against Tottenham"
-        },
         {
           "id": 21,
           "home": "Liverpool",
@@ -157,10 +94,25 @@
           "guestIMG": "https://media.api-sports.io/football/teams/51.png",
           "guestGoals": 0,
           "homeGoals": 0,
-          "cost": "9900",
-          "betType": "1",
-          "win": 17491.92231828828,
-          "text": "Liverpool will win against Brighton"
+          "cost": "100",
+          "betType": "0",
+          "win": 193.98143439871768,
+          "text": "The match will be a draw",
+          "state": 0
+        },
+        {
+          "id": 16,
+          "home": "Wolves",
+          "guest": "Crystal Palace",
+          "homeIMG": "https://media.api-sports.io/football/teams/39.png",
+          "guestIMG": "https://media.api-sports.io/football/teams/52.png",
+          "guestGoals": 0,
+          "homeGoals": "6",
+          "cost": "694",
+          "betType": "3",
+          "win": 3348.806988138965,
+          "text": "Wolves will play 6 : 0 against Crystal Palace",
+          "state": 0
         },
         {
           "id": 20,
@@ -168,16 +120,24 @@
           "guest": "Arsenal",
           "homeIMG": "https://media.api-sports.io/football/teams/41.png",
           "guestIMG": "https://media.api-sports.io/football/teams/42.png",
-          "guestGoals": 0,
-          "homeGoals": "5",
-          "cost": "100",
+          "guestGoals": "2",
+          "homeGoals": "10",
+          "cost": "100000",
           "betType": "3",
-          "win": 649.4930248118412,
-          "text": "Southampton will play 5 : 0 against Arsenal"
+          "win": 476989.41261722177,
+          "text": "Southampton will play 10 : 2 against Arsenal",
+          "state": 0
         }
       ],
-      "wonBets": [],
-      "lostBets": []
+      "historyOfBets": []
+    },
+    {
+      "name": "Kylo Ren",
+      "email": "kyloren.jointhedarkside@gmail.com",
+      "coins": 10000,
+      "bets": [],
+      "historyOfBets": [],
+      "id": 2
     }
   ]
 }

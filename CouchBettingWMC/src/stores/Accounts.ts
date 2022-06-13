@@ -1,9 +1,10 @@
 import type {Bet} from "./Betting";
 import {loggedAccount} from "./Betting";
+import {goto} from "$app/navigation";
 export interface User {
     id: number,
     name:string,
-    password:string,
+    email:string,
     coins: number,
     bets: Bet[],
     historyOfBets: Bet[]
@@ -12,38 +13,52 @@ const unallowedSigns= ['*', '/', '"', '-', '+', '#', '[', ']', '{', '}', '=', ';
 
 export class AccountManager
 {
-    public async LogIn(name2:string, password:string): Promise<boolean>
+    public async LogIn(email:string ): Promise<boolean>
     {
         const users:User[] = <User[]> await $.get("http://localhost:4000/accounts");
+        console.log(users);
         users.map(existing_user=>{
-                if(existing_user.name == name2)
+                if(existing_user.email == email)
                 {
-                    global.loggedAccount = existing_user;
-                    console.log(loggedAccount)
+                    alert("You are logged in!!!");
+
+                    localStorage.setItem('username', existing_user.name);
+                    localStorage.setItem('email', existing_user.email);
+                    localStorage.setItem('coins', existing_user.coins.toString());
+                    localStorage.setItem('id', existing_user.id.toString());
+
                     return true;
                 }
             }
         );
         return false;
     }
-    public async SignUpUser(name:string, password:string): Promise<boolean>
+    public async SignUpUser(name:string, email:string): Promise<boolean>
     {
-        if(await this.LogIn(name,password) == false &&  this.VerfiyName(name)== true)
+        if(await this.LogIn(name) == false &&  this.VerfiyName(name)== true)
         {
-            this.AddUser(name,password)
+            await this.AddUser(name, email)
         }
 
         return false;
     }
-    private AddUser(name:string, password:string)
+    private async GetLengthOfDB()
     {
+        const users = <User[]> await $.get("http://localhost:4000/accounts");
+        return users.length;
+    }
+
+    private async AddUser(name:string, email:string)
+    {
+        const length = await this.GetLengthOfDB();
+
         const user={
-            username: name,
-            password: password,
+            name: name,
+            email: email,
             coins: 10000,
             bets: [],
-            wonBets: [],
-            lostBets: []
+            historyOfBets: [],
+            id: length
         }
         $.ajax({
             url: "http://localhost:4000/accounts",
@@ -53,6 +68,14 @@ export class AccountManager
             processData: false,
             success: _ => {console.log("success")}
         });
+
+        localStorage.setItem('username', user.name);
+        localStorage.setItem('email', user.email);
+        localStorage.setItem('coins', user.coins.toString());
+        localStorage.setItem('id', user.id.toString());
+
+        alert("You are logged in!");
+
     }
 
     private VerfiyName(name:string):boolean
@@ -79,4 +102,10 @@ export class AccountManager
     }
 }
 
+export function SignOut()
+{
+    localStorage.clear();
+    goto('/');
+    setTimeout(()=>{window.location.reload()},300);
+}
 

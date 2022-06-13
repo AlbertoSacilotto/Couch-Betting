@@ -72,7 +72,7 @@ export class BettSystem
         loggedAccount.bets.push(bet);
         const user={
             name: loggedAccount.name,
-            password: loggedAccount.password,
+            email: loggedAccount.email,
             coins: loggedAccount.coins - bet.cost,
             bets: loggedAccount.bets,
             historyOfBets: loggedAccount.historyOfBets,
@@ -141,7 +141,7 @@ export class BettSystem
 
         const user = {
             name: loggedAccount.name,
-            password: loggedAccount.password,
+            email: loggedAccount.email,
             coins: loggedAccount.coins,
             bets: loggedAccount.bets,
             historyOfBets: loggedAccount.historyOfBets
@@ -169,7 +169,7 @@ export class BettSystem
         loggedAccount.bets = loggedAccount.bets.filter(n=>{return n.id != id});
         const user = {
             name: loggedAccount.name,
-            password: loggedAccount.password,
+            email: loggedAccount.email,
             coins: loggedAccount.coins,
             bets: loggedAccount.bets,
             historyOfBets: loggedAccount.historyOfBets
@@ -186,6 +186,7 @@ export class BettSystem
     public check(amount: number, win: number, id: number, type: number,homeGoals:number,guestGoals:number)
     {
         let a = false;
+        console.log(loggedAccount)
         loggedAccount.bets.map(item=>{
             if(id == item.id)
             {
@@ -216,9 +217,9 @@ export class BettSystem
         }
     }
 }
-export const loggedAccount = await GetUser();
-async function  GetUser()
-{
-    const users = <User[]> await jQuery.get("http://localhost:4000/accounts/");
-    return users[Number(localStorage.getItem('uid'))];
+export const loggedAccount:User = await GetUser();
+async function GetUser(){
+    const users = <User[]> await jQuery.get("http://localhost:4000/accounts");
+    console.log(users[localStorage.getItem('id')]);
+    return users[localStorage.getItem('id')];
 }

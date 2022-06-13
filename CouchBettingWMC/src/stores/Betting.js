@@ -51,7 +51,7 @@ export class BettSystem {
         loggedAccount.bets.push(bet);
         const user = {
             name: loggedAccount.name,
-            password: loggedAccount.password,
+            email: loggedAccount.email,
             coins: loggedAccount.coins - bet.cost,
             bets: loggedAccount.bets,
             historyOfBets: loggedAccount.historyOfBets,
@@ -114,7 +114,7 @@ export class BettSystem {
         loggedAccount.bets = loggedAccount.bets.filter(n => { return n.id != id; });
         const user = {
             name: loggedAccount.name,
-            password: loggedAccount.password,
+            email: loggedAccount.email,
             coins: loggedAccount.coins,
             bets: loggedAccount.bets,
             historyOfBets: loggedAccount.historyOfBets
@@ -140,7 +140,7 @@ export class BettSystem {
         loggedAccount.bets = loggedAccount.bets.filter(n => { return n.id != id; });
         const user = {
             name: loggedAccount.name,
-            password: loggedAccount.password,
+            email: loggedAccount.email,
             coins: loggedAccount.coins,
             bets: loggedAccount.bets,
             historyOfBets: loggedAccount.historyOfBets
@@ -156,6 +156,7 @@ export class BettSystem {
     }
     check(amount, win, id, type, homeGoals, guestGoals) {
         let a = false;
+        console.log(loggedAccount);
         loggedAccount.bets.map(item => {
             if (id == item.id) {
                 a = true;
@@ -182,7 +183,8 @@ export class BettSystem {
 }
 export const loggedAccount = await GetUser();
 async function GetUser() {
-    const users = await jQuery.get("http://localhost:4000/accounts/");
-    return users[Number(localStorage.getItem('uid'))];
+    const users = await jQuery.get("http://localhost:4000/accounts");
+    console.log(users[localStorage.getItem('id')]);
+    return users[localStorage.getItem('id')];
 }
 //# sourceMappingURL=Betting.js.map

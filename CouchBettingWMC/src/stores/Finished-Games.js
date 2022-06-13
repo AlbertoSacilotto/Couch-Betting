@@ -133,7 +133,7 @@ export const finishedGames = [
         homeGoals: 2,
         guestGoals: 1,
         date: "20/5/2022",
-        id: 18,
+        id: 1,
     },
     {
         homeImage: teams[8].teamLogo,

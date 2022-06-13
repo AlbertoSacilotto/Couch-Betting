@@ -1,31 +1,41 @@
 import { loggedAccount } from "./Betting";
+import { goto } from "$app/navigation";
 const unallowedSigns = ['*', '/', '"', '-', '+', '#', '[', ']', '{', '}', '=', ';', ':', '@', '|', '<', '>', '?', '!', ',',];
 export class AccountManager {
-    async LogIn(name2, password) {
+    async LogIn(email) {
         const users = await $.get("http://localhost:4000/accounts");
+        console.log(users);
         users.map(existing_user => {
-            if (existing_user.name == name2) {
-                global.loggedAccount = existing_user;
-                console.log(loggedAccount);
+            if (existing_user.email == email) {
+                alert("You are logged in!!!");
+                localStorage.setItem('username', existing_user.name);
+                localStorage.setItem('email', existing_user.email);
+                localStorage.setItem('coins', existing_user.coins.toString());
+                localStorage.setItem('id', existing_user.id.toString());
                 return true;
             }
         });
         return false;
     }
-    async SignUpUser(name, password) {
-        if (await this.LogIn(name, password) == false && this.VerfiyName(name) == true) {
-            this.AddUser(name, password);
+    async SignUpUser(name, email) {
+        if (await this.LogIn(name) == false && this.VerfiyName(name) == true) {
+            await this.AddUser(name, email);
         }
         return false;
     }
-    AddUser(name, password) {
+    async GetLengthOfDB() {
+        const users = await $.get("http://localhost:4000/accounts");
+        return users.length;
+    }
+    async AddUser(name, email) {
+        const length = await this.GetLengthOfDB();
         const user = {
-            username: name,
-            password: password,
+            name: name,
+            email: email,
             coins: 10000,
             bets: [],
-            wonBets: [],
-            lostBets: []
+            historyOfBets: [],
+            id: length
         };
         $.ajax({
             url: "http://localhost:4000/accounts",
@@ -35,6 +45,11 @@ export class AccountManager {
             processData: false,
             success: _ => { console.log("success"); }
         });
+        localStorage.setItem('username', user.name);
+        localStorage.setItem('email', user.email);
+        localStorage.setItem('coins', user.coins.toString());
+        localStorage.setItem('id', user.id.toString());
+        alert("You are logged in!");
     }
     VerfiyName(name) {
         if (name == "" || name == undefined || name == null || name.length > 16) {
@@ -51,5 +66,10 @@ export class AccountManager {
         }
         return true;
     }
+}
+export function SignOut() {
+    localStorage.clear();
+    goto('/');
+    setTimeout(() => { window.location.reload(); }, 300);
 }
 //# sourceMappingURL=Accounts.js.map
