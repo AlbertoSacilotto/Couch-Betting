@@ -34,3 +34,10 @@
 * Yanis: Frontend, Backend and Logodesign
 
 * Teamleader: Albert Sacilotto
+
+
+Start server(For login): cd Server
+npx json-server --watch -p 4000  db.json
+
+
+Start svelte: npm run dev
